@@ -12,7 +12,7 @@ class Paginas {
         session_start();
         require_once ("Usuario.php");
         $usuario = Usuario::unserialize($_SESSION['ctism_user']);
-        if ( basename($_SERVER['SCRIPT_NAME']) != 'getpage.php' || !self::checkPermissao($usuario, $_GET['pg']) ) {
+        if ( !self::checkPermissao($usuario, basename($_SERVER["SCRIPT_FILENAME"], '.php')) ) {
             http_response_code(403);
             if ( basename($_SERVER['SCRIPT_NAME']) != 'getpage.php' ) {
                 header( 'Location: index.php' );
@@ -29,7 +29,7 @@ class Paginas {
     static function checkPermissao($usuario,$pagina) {
         require_once ("ConexaoBD.php");
         $gidArray = $usuario->getGrupos();
-        $sql = 'SELECT COUNT(*) AS cnt FROM permissao WHERE permissao = 1 AND idpagina=? AND idgrupo IN (' . str_repeat ('?, ',  count ($gidArray) - 1) . '?)';
+        $sql = 'SELECT COUNT(*) AS cnt FROM permissao WHERE id_pagina=? AND (id_grupo = \'*\' OR id_grupo IN (' . str_repeat ('?, ',  count ($gidArray) - 1) . '?))';
         $statement = ConexaoBD::getConnection()->prepare($sql);
         array_unshift($gidArray,$pagina);
         $statement->execute($gidArray);
