@@ -10,6 +10,9 @@ require_once ("lib/Usuario.php");
 require_once ("lib/Paginas.php");
 require_once ("ConfigClass.php");
 $usuario = Usuario::restoreFromSession();
+if ($usuario == null) {
+    header('Location: login.php');
+}
 ?>
 <html>
 <head>
@@ -17,6 +20,7 @@ $usuario = Usuario::restoreFromSession();
     <link rel="stylesheet" href="css/main.css">
     <title><?=ConfigClass::sysName?></title>
 </head>
+<body>
     <? include 'header.php'; ?>
     <div class="row">
     <?
@@ -27,6 +31,8 @@ $usuario = Usuario::restoreFromSession();
             </div>
         <? } ?>
     </div>
+    <? include 'footer.php';?>
+</body>
 </html>
 
 
