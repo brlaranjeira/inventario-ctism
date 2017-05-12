@@ -165,5 +165,31 @@ class Sala {
 
     }
 
+    public function save() {
+        require_once ("lib/ConexaoBD.php");
+        require_once ("Predio.php");
+        $conn = ConexaoBD::getConnection();
+        if ($conn->inTransaction()) {
+            return false;
+        }
+        $conn->beginTransaction();
+        if (isset($this->id)) { //update
+            //TODO: UPDATE
+        } else { //insert
+            $sql = 'INSERT INTO sala (id_predio,nro,descricao) values (?,?,?)';
+            $statement = $conn->prepare($sql);
+            if (!$statement->execute(array($this->predio->getId(),$this->nro,$this->descricao))) {
+                $conn->rollBack();
+                return false;
+            }
+            $this->id = $conn->lastInsertId();
+            if ($conn->commit()) {
+                return $this->id;
+            }
+            $conn->rollBack();
+            return false;
+        }
+    }
+
 
 }
