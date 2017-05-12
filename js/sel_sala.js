@@ -76,6 +76,8 @@ $('#btn-novo-predio').click(function () {
            $('#predio').append($opt);
            $('#modal-add-predio').modal('hide');
            showAlert('success','Pronto!','Prédio adicionado com sucesso');
+           $('#predio').val(response.id);
+           $('#predio').change();
        }, error: function ( response ) {
            
        }
