@@ -20,6 +20,7 @@ if (sizeof($_POST) > 0) {
 <html>
 <head>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/inventario.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/sel_sala.css">
     <title><?=ConfigClass::sysName?></title>
@@ -28,9 +29,13 @@ if (sizeof($_POST) > 0) {
 <?
 include 'header.php';
 ?>
+<div id="div-alert" class="alert">
+    <strong id="div-alert-title">Success!</strong>
+    <span id="div-alert-span">This alert box could indicate a successful or positive action.</span>
+</div>
 <form id="form-sala" method="post" action="">
     <div class="row">
-        <div class="col-xs-offset-1 col-xs-10">
+        <div class="col-xs-12 col-md-offset-1 col-md-10">
             <div class="form-group">
                 <label for="predio">Prédio</label>
                 <div class="input-group">
@@ -50,7 +55,7 @@ include 'header.php';
         </div>
     </div>
     <div class="row hidden" id="row-salas">
-        <div class="col-xs-offset-1 col-xs-10 ">
+        <div class="col-xs-12 col-md-offset-1 col-md-10">
             <div class="form-group">
                 <label for="sala">Sala</label>
                 <div class="input-group">
@@ -61,7 +66,7 @@ include 'header.php';
         </div>
     </div>
     <div class="row hidden" id="row-containers">
-        <div class="col-xs-offset-1 col-xs-10">
+        <div class="col-xs-12 col-md-offset-1 col-md-10">
             <div class="form-group">
                 <label for="container">Container</label>
                 <div class="input-group">
@@ -79,23 +84,41 @@ include 'header.php';
 </form>
 
 
-<div id="modal-add-predio" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Novo Prédio</h4>
-            </div>
-            <div class="modal-body">
-                Novo prédio
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<div id="modal-add-predio" class="modal-add modal fade" role="dialog">
+    <form id="form-novo-predio">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Novo Prédio</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <div class="form-group">
+                                <label for="predio-nome">Nome</label>
+                                <input type="text" name="predio-nome" id="predio-nome" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <div class="form-group">
+                                <label for="predio-descricao">Descrição</label>
+                                <input type="text" name="predio-descricao" id="predio-descricao" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button id="btn-novo-predio" type="button" class="btn btn-info">Enviar</button>
+                </div>
             </div>
         </div>
-    </div>
+    </form>
 </div>
-<div id="modal-add-sala" class="modal fade" role="dialog">
+
+
+<div id="modal-add-sala" class="modal-add modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -111,7 +134,7 @@ include 'header.php';
         </div>
     </div>
 </div>
-<div id="modal-add-container" class="modal fade" role="dialog">
+<div id="modal-add-container" class="modal-add modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -134,5 +157,6 @@ include 'header.php';
 <script type="application/javascript" language="javascript" src="js/jquery/jquery-2.2.1.min.js"></script>
 <script type="application/javascript" language="javascript" src="js/jquery/jquery.mask.min.js"></script>
 <script type="application/javascript" language="javascript" src="js/bootstrap/bootstrap.min.js"></script>
+<script type="application/javascript" language="javascript" src="js/inventario.js"></script>
 <script type="application/javascript" language="javascript" src="js/sel_sala.js"></script>
 </html>

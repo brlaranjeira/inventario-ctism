@@ -94,4 +94,29 @@ class Predio {
         return new Predio($id,$ret->nome,$ret->descricao);
     }
 
+    public function save() {
+        require_once ("lib/ConexaoBD.php");
+        $conn = ConexaoBD::getConnection();
+        if ($conn->inTransaction()) {
+            return false;
+        }
+        $conn->beginTransaction();
+        if (isset($this->id)) { //update
+            //TODO: UPDATE
+        } else { //insert
+            $sql = 'INSERT INTO predio (nome,descricao) values (?,?)';
+            $statement = $conn->prepare($sql);
+            if (!$statement->execute(array($this->nome,$this->descricao))) {
+                $conn->rollBack();
+                return false;
+            }
+            $this->id = $conn->lastInsertId();
+            if ($conn->commit()) {
+                return $this->id;
+            }
+            $conn->rollBack();
+            return false;
+        }
+    }
+
 }

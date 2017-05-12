@@ -56,3 +56,28 @@ $('#form-sala').on('change', '#sala', function() {
         });
     }
 });
+
+$('.modal-add').on('show.bs.modal', function () {
+    $('input[type=text]').val('');
+});
+
+$('#btn-novo-predio').click(function () {
+   $.ajax('novopredio.php', {
+       method: 'post',
+       data: {
+           nome: document.getElementById('predio-nome').value,
+           descricao: document.getElementById('predio-descricao').value
+       }, success: function ( response ) {
+           debugger;
+           response = JSON.parse(response);
+           var $opt = $('<option/>');
+           $opt.attr('value',response.id);
+           $opt.text(response.nome + ' [' + response.descricao + ']');
+           $('#predio').append($opt);
+           $('#modal-add-predio').modal('hide');
+           showAlert('success','Pronto!','Prédio adicionado com sucesso');
+       }, error: function ( response ) {
+           
+       }
+   })
+});
