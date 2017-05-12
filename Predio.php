@@ -43,6 +43,24 @@ class Predio {
     }
 
     /**
+     * @return Sala[] todas as salas do predio
+     */
+    public function getSalas() {
+        require_once ("lib/ConexaoBD.php");
+        require_once ("Sala.php");
+        $sql = 'SELECT * FROM sala WHERE id_predio = ?';
+        $conn = ConexaoBD::getConnection();
+        $statement = $conn->prepare($sql);
+        $statement->execute(array($this->id));
+        $rows = $statement->fetchAll();
+        $salas = array();
+        foreach ($rows as $row) {
+            $salas[] = new Sala ($row['id'],$row['id_predio'],$row['nro'],$row['descricao']);
+        }
+        return $salas;
+    }
+
+    /**
      * @return Predio[] todos os predios
      */
     public static function getAll() {
@@ -59,5 +77,21 @@ class Predio {
         return $predios;
     }
 
+    public function asJSON() {
+        $json = '{ "id": "' . $this->id . '",';
+        $json .= '"nome": "' . $this->nome . '",';
+        $json .= '"descricao": "' . $this->descricao . '"}';
+        return $json;
+    }
+
+    public static function getById($id) {
+        require_once ("lib/ConexaoBD.php");
+        $sql = 'SELECT nome, descricao FROM predio WHERE id = ?';
+        $conn = ConexaoBD::getConnection();
+        $statement = $conn->prepare($sql);
+        $statement->execute(array($id ));
+        $ret = $statement->fetchObject();
+        return new Predio($id,$ret->nome,$ret->descricao);
+    }
 
 }
