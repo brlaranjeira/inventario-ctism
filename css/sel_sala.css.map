@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,SAAU;EACR,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,IAAI",
+"sources": ["../scss/sel_sala.scss"],
+"names": [],
+"file": "sel_sala.css"
+}
