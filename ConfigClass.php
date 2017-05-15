@@ -8,7 +8,7 @@
  */
 class ConfigClass {
 
-    const diretorioArquivos = '/var/local/inventario';
+    const diretorioImagens = 'img';
 
     const dbHost = 'dev';
     const dbUser = 'inventario';
@@ -18,5 +18,6 @@ class ConfigClass {
     const mysqlCharset = 'utf8';
 
     const sysName = 'Inventário';
+
 
 }

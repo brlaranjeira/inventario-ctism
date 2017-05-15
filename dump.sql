@@ -66,7 +66,7 @@ CREATE TABLE `pagina` (
 
 LOCK TABLES `pagina` WRITE;
 /*!40000 ALTER TABLE `pagina` DISABLE KEYS */;
-INSERT INTO `pagina` VALUES ('cadastrar','Cadastrar Equipamento',''),('getcontainers','','\0'),('getsalas','','\0'),('sel_resp','Selecionar Responsável','\0'),('sel_sala','Selecionar Sala','\0');
+INSERT INTO `pagina` VALUES ('cadastrar','Cadastrar Equipamento',''),('getcontainers','','\0'),('getsalas','','\0'),('gettipos','','\0'),('sel_resp','Selecionar Responsável','\0'),('sel_sala','Selecionar Sala','\0');
 /*!40000 ALTER TABLE `pagina` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -91,7 +91,7 @@ CREATE TABLE `permissao` (
 
 LOCK TABLES `permissao` WRITE;
 /*!40000 ALTER TABLE `permissao` DISABLE KEYS */;
-INSERT INTO `permissao` VALUES ('sel_resp','*'),('sel_sala','10004'),('cadastrar','*'),('getcontainers','10004'),('getsalas','10004');
+INSERT INTO `permissao` VALUES ('sel_resp','*'),('sel_sala','10004'),('cadastrar','*'),('getcontainers','10004'),('getsalas','10004'),('gettipos','10004');
 /*!40000 ALTER TABLE `permissao` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -150,6 +150,34 @@ LOCK TABLES `sala` WRITE;
 INSERT INTO `sala` VALUES (1,1,'142','Departamento Técnico'),(2,1,'111','Sala XYZ'),(3,2,'321','Sala Teste'),(8,1,'001','Portaria'),(9,1,'x','nova sala'),(10,1,'987897','456564'),(11,1,'bolo','chocolate'),(12,4,'302','Professores');
 /*!40000 ALTER TABLE `sala` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `tipoeqpt`
+--
+
+DROP TABLE IF EXISTS `tipoeqpt`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `tipoeqpt` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(50) NOT NULL,
+  `descricao` varchar(150) NOT NULL,
+  `img` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `tipoeqpt_id_uindex` (`id`),
+  UNIQUE KEY `tipoeqpt_nome_uindex` (`nome`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tipoeqpt`
+--
+
+LOCK TABLES `tipoeqpt` WRITE;
+/*!40000 ALTER TABLE `tipoeqpt` DISABLE KEYS */;
+INSERT INTO `tipoeqpt` VALUES (1,'Switch','Equipamento de rede','tp-1.jpg'),(2,'HD Externo','Equipamento de armazenamento','tp-2.jpg');
+/*!40000 ALTER TABLE `tipoeqpt` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -160,4 +188,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-15 11:03:13
+-- Dump completed on 2017-05-15 18:03:42
