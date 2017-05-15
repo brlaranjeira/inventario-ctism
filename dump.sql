@@ -16,6 +16,35 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
+-- Table structure for table `container`
+--
+
+DROP TABLE IF EXISTS `container`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `container` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `id_sala` bigint(20) NOT NULL,
+  `cod` varchar(10) NOT NULL,
+  `descricao` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `container_id_uindex` (`id`),
+  KEY `container_sala_id_fk` (`id_sala`),
+  CONSTRAINT `container_sala_id_fk` FOREIGN KEY (`id_sala`) REFERENCES `sala` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `container`
+--
+
+LOCK TABLES `container` WRITE;
+/*!40000 ALTER TABLE `container` DISABLE KEYS */;
+INSERT INTO `container` VALUES (1,1,'A','Armário A'),(2,1,'B','Armário B'),(3,1,'C','Gaveteiro A'),(4,2,'A','Caixa A'),(5,1,'789','ASD'),(6,12,'1','Armário 1'),(7,12,'2','Armário 2'),(8,12,'132','qweqwe');
+/*!40000 ALTER TABLE `container` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `pagina`
 --
 
@@ -37,7 +66,7 @@ CREATE TABLE `pagina` (
 
 LOCK TABLES `pagina` WRITE;
 /*!40000 ALTER TABLE `pagina` DISABLE KEYS */;
-INSERT INTO `pagina` VALUES ('cadastrar','Cadastrar Equipamento',''),('sel_resp','Selecionar Responsável','\0'),('sel_sala','Selecionar Sala','\0');
+INSERT INTO `pagina` VALUES ('cadastrar','Cadastrar Equipamento',''),('getcontainers','','\0'),('getsalas','','\0'),('sel_resp','Selecionar Responsável','\0'),('sel_sala','Selecionar Sala','\0');
 /*!40000 ALTER TABLE `pagina` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -50,7 +79,9 @@ DROP TABLE IF EXISTS `permissao`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `permissao` (
   `id_pagina` varchar(15) NOT NULL,
-  `id_grupo` varchar(10) NOT NULL
+  `id_grupo` varchar(10) NOT NULL,
+  KEY `permissao_pagina_id_fk` (`id_pagina`),
+  CONSTRAINT `permissao_pagina_id_fk` FOREIGN KEY (`id_pagina`) REFERENCES `pagina` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -60,8 +91,64 @@ CREATE TABLE `permissao` (
 
 LOCK TABLES `permissao` WRITE;
 /*!40000 ALTER TABLE `permissao` DISABLE KEYS */;
-INSERT INTO `permissao` VALUES ('sel_resp','*'),('sel_sala','10002'),('cadastrar','10004');
+INSERT INTO `permissao` VALUES ('sel_resp','*'),('sel_sala','10004'),('cadastrar','*'),('getcontainers','10004'),('getsalas','10004');
 /*!40000 ALTER TABLE `permissao` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `predio`
+--
+
+DROP TABLE IF EXISTS `predio`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `predio` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(10) NOT NULL,
+  `descricao` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `predio_id_uindex` (`id`),
+  UNIQUE KEY `predio_nome_uindex` (`nome`)
+) ENGINE=InnoDB AUTO_INCREMENT=27 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `predio`
+--
+
+LOCK TABLES `predio` WRITE;
+/*!40000 ALTER TABLE `predio` DISABLE KEYS */;
+INSERT INTO `predio` VALUES (1,'5','prédio principal'),(2,'5A','pr2'),(3,'5B','pr3'),(4,'5C','pr4'),(5,'5D','pr5'),(6,'5E','prx'),(25,'Tambo','Longe'),(26,'1','3');
+/*!40000 ALTER TABLE `predio` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `sala`
+--
+
+DROP TABLE IF EXISTS `sala`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `sala` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `id_predio` bigint(20) NOT NULL,
+  `nro` varchar(10) NOT NULL,
+  `descricao` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `sala_id_uindex` (`id`),
+  KEY `sala_predio_id_fk` (`id_predio`),
+  CONSTRAINT `sala_predio_id_fk` FOREIGN KEY (`id_predio`) REFERENCES `predio` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `sala`
+--
+
+LOCK TABLES `sala` WRITE;
+/*!40000 ALTER TABLE `sala` DISABLE KEYS */;
+INSERT INTO `sala` VALUES (1,1,'142','Departamento Técnico'),(2,1,'111','Sala XYZ'),(3,2,'321','Sala Teste'),(8,1,'001','Portaria'),(9,1,'x','nova sala'),(10,1,'987897','456564'),(11,1,'bolo','chocolate'),(12,4,'302','Professores');
+/*!40000 ALTER TABLE `sala` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -73,4 +160,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-11 15:09:42
+-- Dump completed on 2017-05-15 11:03:13
