@@ -15,3 +15,7 @@ $usuario = Usuario::restoreFromSession();
     <div class="col-xs-12">Olá, <?=$usuario->getFullName()?> <a href="logout.php">(sair)</a></div>
     <div class="col-xs-12"><a href="main.php">Página Inicial</a></div>
 </div>
+<div id="div-alert" class="alert">
+    <strong id="div-alert-title"></strong>
+    <span id="div-alert-span"></span>
+</div>

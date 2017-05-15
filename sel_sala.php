@@ -15,8 +15,10 @@ Paginas::forcaSeguranca();
 if (sizeof($_POST) > 0) {
     session_start();
     $_SESSION['ctism_inventario_sala'] = $_POST['sala'];
-    if (isset($_POST['container'])) {
+    if (!empty($_POST['container'])) {
         $_SESSION['ctism_inventario_container'] = $_POST['container'];
+    } else {
+        unset($_SESSION['ctism_inventario_container']);
     }
     header('Location: cadastrar.php');
 }
@@ -31,13 +33,8 @@ if (sizeof($_POST) > 0) {
     <title><?=ConfigClass::sysName?></title>
 </head>
 <body>
-<?
-include 'header.php';
-?>
-<div id="div-alert" class="alert">
-    <strong id="div-alert-title">Success!</strong>
-    <span id="div-alert-span">This alert box could indicate a successful or positive action.</span>
-</div>
+<? include 'header.php'; ?>
+
 <form id="form-sala" method="post" action="">
     <div class="row">
         <div class="col-xs-12 col-md-offset-1 col-md-10">

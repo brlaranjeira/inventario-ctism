@@ -59,6 +59,20 @@ class Container
     }
 
     /**
+     * @param $ctism_inventario_container
+     * @return Container
+     */
+    public static function getById($id) {
+        require_once ("lib/ConexaoBD.php");
+        $sql = 'SELECT id_sala, cod, descricao FROM container WHERE id = ?';
+        $conn = ConexaoBD::getConnection();
+        $statement = $conn->prepare($sql);
+        $statement->execute(array($id));
+        $ret = $statement->fetchObject();
+        return new Container($id,$ret->id_sala,$ret->cod,$ret->descricao);
+    }
+
+    /**
      * @return string
      */
     public function asJSON() {

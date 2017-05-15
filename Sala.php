@@ -71,7 +71,7 @@ class Sala {
     }
 
     /**
-     * @return mixed
+     * @return Predio
      */
     public function getPredio()
     {
