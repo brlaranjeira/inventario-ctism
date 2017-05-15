@@ -33,6 +33,7 @@ class Container
      * @param string $descricao
      */
     public function __construct($id, $sala, $cod, $descricao) {
+        require_once ('Sala.php');
         $this->id = $id;
         $this->sala = is_object($sala) ? $sala : Sala::getById($sala);
         $this->cod = $cod;
@@ -132,6 +133,33 @@ class Container
     public function setDescricao(string $descricao)
     {
         $this->descricao = $descricao;
+    }
+
+    public function save() {
+        require_once ("lib/ConexaoBD.php");
+        require_once ("Sala.php");
+        $conn = ConexaoBD::getConnection();
+        if ($conn->inTransaction()) {
+            return false;
+        }
+        $conn->beginTransaction();
+        if (isset($this->id)) { //update
+            //TODO: UPDATE
+        } else { //insert
+            $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
+            $sql = 'INSERT INTO container (id_sala,cod,descricao) values (?,?,?)';
+            $statement = $conn->prepare($sql);
+            if (!$statement->execute(array($this->sala->getId(),$this->cod,$this->descricao))) {
+                $conn->rollBack();
+                return false;
+            }
+            $this->id = $conn->lastInsertId();
+            if ($conn->commit()) {
+                return $this->id;
+            }
+            $conn->rollBack();
+            return false;
+        }
     }
 
 

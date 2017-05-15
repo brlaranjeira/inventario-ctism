@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23407a25-293b-49d1-950f-45901aee2d31" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/novasala.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/novocontainer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sala.php" afterPath="$PROJECT_DIR$/Sala.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Container.php" afterPath="$PROJECT_DIR$/Container.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sel_sala.js" afterPath="$PROJECT_DIR$/js/sel_sala.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sel_sala.php" afterPath="$PROJECT_DIR$/sel_sala.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/novocontainer.php" afterPath="$PROJECT_DIR$/novocontainer.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,34 +20,11 @@
       <file leaf-file-name="sel_sala.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sel_sala.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="142" column="26" lean-forward="true" selection-start-line="142" selection-start-column="26" selection-end-line="142" selection-end-column="26" />
+            <state relative-caret-position="2192">
+              <caret line="142" column="26" lean-forward="false" selection-start-line="142" selection-start-column="26" selection-end-line="142" selection-end-column="26" />
               <folding>
                 <element signature="e#6#93#0#PHP" expanded="true" />
-                <element signature="e#3486#3493#1#HTML" expanded="true" />
-                <element signature="e#5065#5072#1#HTML" expanded="true" />
-                <element signature="e#6643#6650#1#HTML" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="inventario.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/inventario.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sel_sala.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/sel_sala.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -58,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/js/inventario.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="192">
-              <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding>
                 <element signature="n#!!doc;n#showAlert#0" expanded="false" />
               </folding>
@@ -82,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sel_sala.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sel_sala.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/sel_sala.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="878">
-              <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+            <state relative-caret-position="652">
+              <caret line="110" column="33" lean-forward="true" selection-start-line="110" selection-start-column="33" selection-end-line="110" selection-end-column="33" />
               <folding>
                 <element signature="e#0#46#0" expanded="false" />
               </folding>
@@ -94,11 +69,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="novocontainer.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="novocontainer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/novocontainer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="320">
+              <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+              <folding>
+                <element signature="e#6#93#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Container.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Container.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1494849450409" expanded="true" signature="892:915" ph="SELECT * FRO... container" />
+                <marker date="1494849450409" expanded="true" signature="3099:3159" ph="INSERT INTO container... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConexaoBD.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/ConexaoBD.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -107,7 +107,7 @@
       <file leaf-file-name="novasala.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/novasala.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="224">
               <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
               <folding>
                 <element signature="e#6#93#0#PHP" expanded="true" />
@@ -131,8 +131,8 @@
       <file leaf-file-name="Predio.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Predio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="835">
-              <caret line="114" column="33" lean-forward="true" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
+            <state relative-caret-position="859">
+              <caret line="106" column="32" lean-forward="false" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
               <folding>
                 <marker date="1494607265563" expanded="true" signature="857:895" ph="SELECT * FRO... sala" />
                 <marker date="1494607265563" expanded="true" signature="1421:1441" ph="SELECT * FRO... predio" />
@@ -194,7 +194,6 @@
         <option value="$PROJECT_DIR$/main.php" />
         <option value="$PROJECT_DIR$/container.php" />
         <option value="$PROJECT_DIR$/getsalas.php" />
-        <option value="$PROJECT_DIR$/Container.php" />
         <option value="$PROJECT_DIR$/getcontainers.php" />
         <option value="$PROJECT_DIR$/Predio.php" />
         <option value="$PROJECT_DIR$/novopredio.php" />
@@ -205,6 +204,8 @@
         <option value="$PROJECT_DIR$/Sala.php" />
         <option value="$PROJECT_DIR$/novasala.php" />
         <option value="$PROJECT_DIR$/sel_sala.php" />
+        <option value="$PROJECT_DIR$/Container.php" />
+        <option value="$PROJECT_DIR$/novocontainer.php" />
         <option value="$PROJECT_DIR$/js/sel_sala.js" />
       </list>
     </option>
@@ -246,6 +247,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -302,7 +304,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -432,27 +433,28 @@
       <updated>1494349682631</updated>
       <workItem from="1494349686741" duration="8368000" />
       <workItem from="1494512838490" duration="23467000" />
-      <workItem from="1494588598547" duration="18903000" />
+      <workItem from="1494588598547" duration="19004000" />
+      <workItem from="1494846232650" duration="4140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50738000" />
+    <option name="totallyTimeSpent" value="54979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1917" y="0" width="1086" height="1922" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22777778" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40462962" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298573" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39956093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39956093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -470,14 +472,24 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/novocontainer.php</url>
+          <line>12</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="59" />
+      <option name="time" value="68" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="novopredio.php">
         <watch expression="$predio-&gt;asJSON()" language="PHP" />
+      </configuration>
+      <configuration name="novocontainer.php">
+        <watch expression="$statement-&gt;errorInfo()" language="PHP" />
       </configuration>
       <configuration name="cadastrar.php">
         <watch expression="basename($_SERVER[&quot;SCRIPT_FILENAME&quot;], '.php')" language="PHP" />
@@ -488,6 +500,59 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/sel_sala.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1840">
+          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novasala.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#93#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novopredio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="15" column="50" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="15" selection-end-column="50" />
+          <folding>
+            <element signature="e#6#94#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Predio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1824">
+          <caret line="114" column="33" lean-forward="true" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
+          <folding>
+            <marker date="1494607265563" expanded="true" signature="857:895" ph="SELECT * FRO... sala" />
+            <marker date="1494607265563" expanded="true" signature="1421:1441" ph="SELECT * FRO... predio" />
+            <marker date="1494607265563" expanded="true" signature="2108:2155" ph="SELECT nome,... predio" />
+            <marker date="1494607265563" expanded="true" signature="2735:2783" ph="INSERT INTO predio... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novocontainer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding>
+            <element signature="e#6#93#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -512,9 +577,6 @@
           <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
           <folding>
             <element signature="e#6#93#0#PHP" expanded="true" />
-            <element signature="e#3486#3493#1#HTML" expanded="true" />
-            <element signature="e#5065#5072#1#HTML" expanded="true" />
-            <element signature="e#6643#6650#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -534,7 +596,7 @@
         <state relative-caret-position="272">
           <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
           <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
+            <element signature="e#6#93#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -558,7 +620,8 @@
         <state relative-caret-position="1200">
           <caret line="75" column="32" lean-forward="true" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
           <folding>
-            <marker date="1494540623198" expanded="true" signature="857:880" ph="SELECT * FRO... container" />
+            <marker date="1494849450409" expanded="true" signature="892:915" ph="SELECT * FRO... container" />
+            <marker date="1494849450409" expanded="true" signature="3099:3159" ph="INSERT INTO container... " />
           </folding>
         </state>
       </provider>
@@ -568,7 +631,7 @@
         <state relative-caret-position="208">
           <caret line="18" column="33" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="18" selection-end-column="33" />
           <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
+            <element signature="e#6#93#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -616,7 +679,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
           <caret line="66" column="27" lean-forward="true" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -645,7 +707,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
           <caret line="66" column="27" lean-forward="false" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -713,18 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
           <caret line="36" column="33" lean-forward="false" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
-          <folding>
-            <marker date="1494527729030" expanded="true" signature="929:1000" ph="SELECT COUNT... permissao" />
-            <marker date="1494527729030" expanded="true" signature="929:1004" ph="SELECT COUNT... permissao" />
-            <marker date="1494527729030" expanded="true" signature="929:1075" ph="SELECT COUNT... permissao" />
-            <marker date="1494527729030" expanded="true" signature="929:1076" ph="SELECT COUNT... permissao" />
-            <marker date="1494527729030" expanded="true" signature="1650:1754" ph="SELECT DISTI... permissao" />
-            <marker date="1494527729030" expanded="true" signature="1650:1774" ph="SELECT DISTI... permissao" />
-            <marker date="1494527729030" expanded="true" signature="1650:1778" ph="SELECT DISTI... permissao" />
-            <marker date="1494527729030" expanded="true" signature="1650:1780" ph="SELECT DISTI... permissao" />
-            <marker date="1494527729030" expanded="true" signature="1650:1851" ph="SELECT DISTI... permissao" />
-            <marker date="1494527729030" expanded="true" signature="1650:1852" ph="SELECT DISTI... permissao" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -747,22 +796,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/container.php" />
-    <entry file="file://$PROJECT_DIR$/Container.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="75" column="32" lean-forward="false" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
-          <folding>
-            <marker date="1494540623198" expanded="true" signature="857:880" ph="SELECT * FRO... container" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/getsalas.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="18" column="33" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="18" selection-end-column="33" />
           <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
+            <element signature="e#6#93#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -772,7 +811,7 @@
         <state relative-caret-position="272">
           <caret line="22" column="10" lean-forward="false" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
           <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
+            <element signature="e#6#93#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -785,18 +824,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/172.17.8.5">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/172.17.8.5" />
     <entry file="file://$PROJECT_DIR$/scss/sel_sala.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
-          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -804,7 +836,7 @@
     <entry file="file://$PROJECT_DIR$/scss/inventario.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
-          <caret line="2" column="1" lean-forward="true" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+          <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -812,39 +844,16 @@
     <entry file="file://$PROJECT_DIR$/js/inventario.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
-          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="n#!!doc;n#showAlert#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/novopredio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="50" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="15" selection-end-column="50" />
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Predio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="835">
-          <caret line="114" column="33" lean-forward="true" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
-          <folding>
-            <marker date="1494607265563" expanded="true" signature="857:895" ph="SELECT * FRO... sala" />
-            <marker date="1494607265563" expanded="true" signature="1421:1441" ph="SELECT * FRO... predio" />
-            <marker date="1494607265563" expanded="true" signature="2108:2155" ph="SELECT nome,... predio" />
-            <marker date="1494607265563" expanded="true" signature="2735:2783" ph="INSERT INTO predio... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/novasala.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="224">
           <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
           <folding>
             <element signature="e#6#93#0#PHP" expanded="true" />
@@ -854,13 +863,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sel_sala.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="142" column="26" lean-forward="true" selection-start-line="142" selection-start-column="26" selection-end-line="142" selection-end-column="26" />
+        <state relative-caret-position="2192">
+          <caret line="142" column="26" lean-forward="false" selection-start-line="142" selection-start-column="26" selection-end-line="142" selection-end-column="26" />
           <folding>
             <element signature="e#6#93#0#PHP" expanded="true" />
-            <element signature="e#3486#3493#1#HTML" expanded="true" />
-            <element signature="e#5065#5072#1#HTML" expanded="true" />
-            <element signature="e#6643#6650#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -879,21 +885,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/sel_sala.js">
+    <entry file="file://$PROJECT_DIR$/novopredio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="878">
-          <caret line="117" column="0" lean-forward="false" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="15" column="50" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="15" selection-end-column="50" />
           <folding>
-            <element signature="e#0#46#0" expanded="false" />
+            <element signature="e#6#94#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Predio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="859">
+          <caret line="106" column="32" lean-forward="false" selection-start-line="106" selection-start-column="32" selection-end-line="106" selection-end-column="32" />
+          <folding>
+            <marker date="1494607265563" expanded="true" signature="857:895" ph="SELECT * FRO... sala" />
+            <marker date="1494607265563" expanded="true" signature="1421:1441" ph="SELECT * FRO... predio" />
+            <marker date="1494607265563" expanded="true" signature="2108:2155" ph="SELECT nome,... predio" />
+            <marker date="1494607265563" expanded="true" signature="2735:2783" ph="INSERT INTO predio... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/novocontainer.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#93#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/ConexaoBD.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="27" column="34" lean-forward="true" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Container.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1494849450409" expanded="true" signature="892:915" ph="SELECT * FRO... container" />
+            <marker date="1494849450409" expanded="true" signature="3099:3159" ph="INSERT INTO container... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sel_sala.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="110" column="33" lean-forward="true" selection-start-line="110" selection-start-column="33" selection-end-line="110" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

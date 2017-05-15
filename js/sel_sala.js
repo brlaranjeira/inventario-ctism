@@ -115,7 +115,15 @@ $('#btn-novo-container').click(function () {
             nro: document.getElementById('container-nro').value,
             descricao: document.getElementById('container-descricao').value
         }, success: function ( response ) {
-
+            debugger;
+            response = JSON.parse(response);
+            var $opt = $('<option/>');
+            $opt.attr('value',response.id);
+            $opt.text('Sala ' + response.sala.nro + ' - ' + response.cod + ' [' + response.descricao + ']');
+            $('#container').append($opt);
+            $('#modal-add-container').modal('hide');
+            showAlert('success','Pronto!','Container adicionado com sucesso');
+            $('#container').val(response.id);
         }, error: function ( response ) {
 
         }
