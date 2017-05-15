@@ -49,7 +49,7 @@ class Usuario implements Serializable {
      */
     public function loadGrupos() {
         $this->grupos = array();
-        require_once("lib/LDAP/ldap.php");
+        require_once("LDAP/ldap.php");
         $ldap = new ldap();
         $allGroups = $ldap->getXbyY('gidNumber', 'cn', '*', LDAP_GROUPS_BASE);
         foreach ($allGroups as $gid) {
@@ -63,7 +63,7 @@ class Usuario implements Serializable {
      *
      */
     public function loadUidNumber() {
-        require_once("lib/LDAP/ldap.php");
+        require_once("LDAP/ldap.php");
         $ldap = new ldap();
         $this->uidNumber = $ldap->getXbyY('uidnumber','uid',$this->uid);
     }
@@ -72,10 +72,11 @@ class Usuario implements Serializable {
      *
      */
     public function loadFullName() {
-        require_once("lib/LDAP/ldap.php");
+        require_once("LDAP/ldap.php");
         $ldap = new ldap();
         $this->fullName = $ldap->getXbyY('cn','uid',$this->uid);
     }
+
 
     /**
      * @param $gid
@@ -83,15 +84,32 @@ class Usuario implements Serializable {
      * @return Usuario[]
      */
     public static function getAllFromGroup($gid) {
-        require_once ("lib/LDAP/ldap.php");
+        require_once ("LDAP/ldap.php");
         $ldap = new ldap();
-
-        $ret = array_map(function($usr) {
-            return new Usuario($usr,false);
-        }, array_merge($ldap->getXbyY('uid','gidnumber',$gid), $ldap->getXbyY('memberuid','gidnumber',$gid,LDAP_GROUPS_BASE)));
+        $ret = array();
+        $gid = is_array($gid) ? $gid : array($gid);
+        foreach ($gid as $g) {
+            $curr = array_map(function($usr) {
+                return new Usuario($usr,false);
+            }, array_merge($ldap->getXbyY('uid','gidnumber',$g), $ldap->getXbyY('memberuid','gidnumber',$g,LDAP_GROUPS_BASE)));
+            $ret = array_merge($ret,$curr);
+        }
         usort($ret, function($usrx,$usry) {
             return strcmp(strtolower($usrx->fullName),strtolower($usry->fullName));
         });
+        $last = '';
+        $remove = array();
+        for ($i = 0; $i < sizeof($ret); $i++) {
+            $uidNumber = $ret[$i]->uidNumber;
+            if ( $uidNumber == $last ) {
+                $remove[] = $i;
+            }
+            $last = $uidNumber;
+        }
+        foreach ($remove as $rm) {
+            unset($ret[$rm]);
+        }
+
         return $ret;
     }
 
