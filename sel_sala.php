@@ -27,6 +27,7 @@ if (sizeof($_POST) > 0) {
 <html>
 <head>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome/font-awesome.min.css">
     <link rel="stylesheet" href="css/inventario.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/sel_sala.css">
@@ -51,7 +52,7 @@ if (sizeof($_POST) > 0) {
                         }
                         ?>
                     </select>
-                    <span id="span-add-predio" class="span-add input-group-addon" data-toggle="modal" data-target="#modal-add-predio" ><i class="glyphicon glyphicon-plus"></i></span>
+                    <span id="span-add-predio" class="input-group-addon" data-toggle="modal" data-target="#modal-add-predio" ><i class="fa fa-plus"></i></span>
                 </div>
             </div>
         </div>
@@ -62,7 +63,7 @@ if (sizeof($_POST) > 0) {
                 <label for="sala">Sala</label>
                 <div class="input-group">
                     <select class="form-control" name="sala" id="sala"></select>
-                    <span id="span-add-sala" class="span-add input-group-addon" data-toggle="modal" data-target="#modal-add-sala"><i class="glyphicon glyphicon-plus"></i></span>
+                    <span id="span-add-sala" class="span-add input-group-addon" data-toggle="modal" data-target="#modal-add-sala"><i class="fa fa-plus"></i></span>
                 </div>
             </div>
         </div>
@@ -73,7 +74,7 @@ if (sizeof($_POST) > 0) {
                 <label for="container">Container</label>
                 <div class="input-group">
                     <select class="form-control" name="container" id="container"></select>
-                    <span id="span-add-container" class="span-add input-group-addon" data-toggle="modal" data-target="#modal-add-container"><i class="glyphicon glyphicon-plus"></i></span>
+                    <span id="span-add-container" class="span-add input-group-addon" data-toggle="modal" data-target="#modal-add-container"><i class="fa fa-plus"></i></span>
                 </div>
             </div>
         </div>
