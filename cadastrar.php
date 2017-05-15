@@ -11,6 +11,9 @@ Paginas::forcaSeguranca();
 include 'header.php';
 
 session_start();
-if (!isset($_SESSION['session_sala'])) {
+if (!isset($_SESSION['ctism_inventario_sala'])) {
     header('Location: sel_sala.php');
+}
+if (!isset($_SESSION['ctism_inventario_responsavel'])) {
+    header('Location: sel_responsavel.php');
 }

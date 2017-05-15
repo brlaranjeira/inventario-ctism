@@ -13,7 +13,12 @@ Paginas::forcaSeguranca();
 <?
 
 if (sizeof($_POST) > 0) {
-    echo 'lalala';
+    session_start();
+    $_SESSION['ctism_inventario_sala'] = $_POST['sala'];
+    if (isset($_POST['container'])) {
+        $_SESSION['ctism_inventario_container'] = $_POST['container'];
+    }
+    header('Location: cadastrar.php');
 }
 
 ?>
