@@ -34,16 +34,31 @@ if (!empty($_POST)) {
     </head>
     <body>
     <form id="form-login" action="login.php" method="post">
-        <?php
-            if (isset($msg)) {
-                echo $msg . '<br/>';
-            }
-        ?>
-        <label>Usuário:</label>
-        <input type="text" name="usr"/>
-        <label>Senha:</label>
-        <input type="password" name="pw"/>
-        <input type="submit">
+        <? if (isset($msg)) { ?>
+            <div class="row">
+                <div class="col-xs-12">
+                    <?=$msg?><br/>
+                </div>
+            </div>
+        <? } ?>
+        <div class="row">
+            <div class="col-xs-12 form-group">
+                <label for="usr">Usuário:</label>
+                <input type="text" name="usr"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 form-group">
+                <label for="pw">Senha:</label>
+                <input type="password" name="pw"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 form-group">
+                <button type="submit" class="btn btn-info">Entrar</button>
+            </div>
+        </div>
+
     </form>
     </body>
     </html>
