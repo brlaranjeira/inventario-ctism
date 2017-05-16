@@ -24,7 +24,6 @@ $('#form-sala').on('change', '#predio', function() {
                 $('#row-salas').removeClass('hidden');
             }, error: function ( response ) {
                 alert('erro!');
-                debugger;
             }
         });
     }
@@ -39,7 +38,6 @@ $('#form-sala').on('change', '#sala', function() {
         $.ajax('getcontainers.php', {
             data: {idsala: idSala},
             success: function ( response ) {
-                debugger;
                 var containers = JSON.parse(response);
                 $('#container').empty();
                 $('#container').append($('<option value="">Não há</option>'));
@@ -91,7 +89,6 @@ $('#btn-nova-sala').click(function () {
             nro: document.getElementById('sala-nro').value,
             descricao: document.getElementById('sala-descricao').value
         }, success: function ( response ) {
-            debugger;
             response = JSON.parse(response);
             var $opt = $('<option/>');
             $opt.attr('value',response.id);
@@ -115,7 +112,6 @@ $('#btn-novo-container').click(function () {
             nro: document.getElementById('container-nro').value,
             descricao: document.getElementById('container-descricao').value
         }, success: function ( response ) {
-            debugger;
             response = JSON.parse(response);
             var $opt = $('<option/>');
             $opt.attr('value',response.id);

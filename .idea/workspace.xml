@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23407a25-293b-49d1-950f-45901aee2d31" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sel_sala.php" afterPath="$PROJECT_DIR$/sel_sala.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/novotipoeqpt.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TipoEquipamento.php" afterPath="$PROJECT_DIR$/TipoEquipamento.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cadastrar.php" afterPath="$PROJECT_DIR$/cadastrar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cadastrar.js" afterPath="$PROJECT_DIR$/js/cadastrar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sel_sala.js" afterPath="$PROJECT_DIR$/js/sel_sala.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,45 +24,54 @@
       <file leaf-file-name="sel_sala.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sel_sala.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+            <state relative-caret-position="-491">
+              <caret line="108" column="57" lean-forward="false" selection-start-line="108" selection-start-column="57" selection-end-line="108" selection-end-column="57" />
               <folding>
                 <element signature="e#6#93#0#PHP" expanded="true" />
-                <marker date="1494868967525" expanded="false" signature="3599:3606" ph="×" />
-                <marker date="1494868967525" expanded="false" signature="5178:5185" ph="×" />
-                <marker date="1494868967525" expanded="false" signature="6756:6763" ph="×" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/header.php">
+      <file leaf-file-name="cadastrar.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cadastrar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+            <state relative-caret-position="629">
+              <caret line="150" column="26" lean-forward="true" selection-start-line="150" selection-start-column="26" selection-end-line="150" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sel_resp.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sel_resp.php">
+      <file leaf-file-name="novotipoeqpt.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/novotipoeqpt.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="50" column="10" lean-forward="false" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+            <state relative-caret-position="432">
+              <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
               <folding>
-                <element signature="e#6#93#0#PHP" expanded="true" />
+                <element signature="e#6#94#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cadastrar.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cadastrar.php">
+      <file leaf-file-name="sel_sala.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/sel_sala.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
+            <state relative-caret-position="931">
+              <caret line="126" column="3" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="126" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#46#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="384">
+              <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -65,8 +80,8 @@
       <file leaf-file-name="cadastrar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/cadastrar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="13" column="72" lean-forward="false" selection-start-line="13" selection-start-column="72" selection-end-line="13" selection-end-column="72" />
+            <state relative-caret-position="572">
+              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding>
                 <element signature="e#0#46#0" expanded="false" />
               </folding>
@@ -77,10 +92,26 @@
       <file leaf-file-name="TipoEquipamento.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TipoEquipamento.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="723">
-              <caret line="126" column="30" lean-forward="true" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
+            <state relative-caret-position="707">
+              <caret line="150" column="65" lean-forward="false" selection-start-line="150" selection-start-column="65" selection-end-line="150" selection-end-column="65" />
               <folding>
-                <marker date="1494875543309" expanded="true" signature="1833:1855" ph="SELECT * FRO... tipoeqpt" />
+                <marker date="1494949101873" expanded="true" signature="1833:1855" ph="SELECT * FRO... tipoeqpt" />
+                <marker date="1494949101873" expanded="true" signature="3056:3112" ph="INSERT INTO tipoeqpt... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Predio.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Predio.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="451">
+              <caret line="90" column="42" lean-forward="true" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
+              <folding>
+                <marker date="1494607265563" expanded="true" signature="857:895" ph="SELECT * FRO... sala" />
+                <marker date="1494607265563" expanded="true" signature="1421:1441" ph="SELECT * FRO... predio" />
+                <marker date="1494607265563" expanded="true" signature="2108:2155" ph="SELECT nome,... predio" />
+                <marker date="1494607265563" expanded="true" signature="2735:2783" ph="INSERT INTO predio... " />
               </folding>
             </state>
           </provider>
@@ -96,39 +127,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Predio.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Predio.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="83" column="21" lean-forward="true" selection-start-line="80" selection-start-column="8" selection-end-line="83" selection-end-column="21" />
-              <folding>
-                <marker date="1494607265563" expanded="true" signature="857:895" ph="SELECT * FRO... sala" />
-                <marker date="1494607265563" expanded="true" signature="1421:1441" ph="SELECT * FRO... predio" />
-                <marker date="1494607265563" expanded="true" signature="2108:2155" ph="SELECT nome,... predio" />
-                <marker date="1494607265563" expanded="true" signature="2735:2783" ph="INSERT INTO predio... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gettipos.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gettipos.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gettipos.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+            <state relative-caret-position="336">
+              <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
               <folding>
                 <element signature="e#6#93#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="getsalas.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/getsalas.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -157,6 +163,7 @@
       <find>sala/</find>
       <find>glyph</find>
       <find>aa</find>
+      <find>debugger</find>
     </findStrings>
     <replaceStrings>
       <replace>form-group</replace>
@@ -175,7 +182,6 @@
         <option value="/etc/php/7.0/cli/php.ini" />
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/scss/main.scss" />
         <option value="$PROJECT_DIR$/logout.php" />
         <option value="$PROJECT_DIR$/footer.php" />
@@ -192,7 +198,6 @@
         <option value="$PROJECT_DIR$/js/inventario.js" />
         <option value="$PROJECT_DIR$/novasala.php" />
         <option value="$PROJECT_DIR$/novocontainer.php" />
-        <option value="$PROJECT_DIR$/js/sel_sala.js" />
         <option value="$PROJECT_DIR$/lib/Usuario.php" />
         <option value="$PROJECT_DIR$/sel_responsavel.php" />
         <option value="$PROJECT_DIR$/sel_resp.php" />
@@ -200,12 +205,15 @@
         <option value="$PROJECT_DIR$/Container.php" />
         <option value="$PROJECT_DIR$/sel_sala.php" />
         <option value="$PROJECT_DIR$/header.php" />
-        <option value="$PROJECT_DIR$/TipoEquipamento.php" />
         <option value="$PROJECT_DIR$/ConfigClass.php" />
         <option value="$PROJECT_DIR$/gettiposautocomplete.php" />
-        <option value="$PROJECT_DIR$/cadastrar.php" />
-        <option value="$PROJECT_DIR$/js/cadastrar.js" />
         <option value="$PROJECT_DIR$/gettipos.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/js/sel_sala.js" />
+        <option value="$PROJECT_DIR$/js/cadastrar.js" />
+        <option value="$PROJECT_DIR$/novotipoeqpt.php" />
+        <option value="$PROJECT_DIR$/TipoEquipamento.php" />
+        <option value="$PROJECT_DIR$/cadastrar.php" />
       </list>
     </option>
   </component>
@@ -219,6 +227,7 @@
   <component name="PhpServers">
     <servers>
       <server host="localhost" id="c0b8a2a8-463d-4059-94bc-5afa71aa6782" name="server" port="8080" />
+      <server host="172.17.12.167" id="3d3aadf2-c383-4f04-ab1b-9fc60b8699c6" name="172.17.12.167" port="8080" />
     </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
@@ -246,7 +255,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -339,13 +347,14 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="Constants" value="false" />
   </component>
   <component name="RunDashboard">
@@ -440,15 +449,15 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="false" name="server" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8080">
-      <method />
-    </configuration>
     <configuration default="false" name="debugger" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" server_name="server" session_id="phpstorm">
       <method />
     </configuration>
+    <configuration default="false" name="server" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" host="172.17.12.167" port="8080">
+      <method />
+    </configuration>
     <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="PHP Built-in Web Server.server" />
-      <item index="1" class="java.lang.String" itemvalue="PHP Remote Debug.debugger" />
+      <item index="0" class="java.lang.String" itemvalue="PHP Remote Debug.debugger" />
+      <item index="1" class="java.lang.String" itemvalue="PHP Built-in Web Server.server" />
       <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.main.php" />
     </list>
     <recent_temporary>
@@ -470,33 +479,34 @@
       <workItem from="1494349686741" duration="8368000" />
       <workItem from="1494512838490" duration="23467000" />
       <workItem from="1494588598547" duration="19004000" />
-      <workItem from="1494846232650" duration="26541000" />
+      <workItem from="1494846232650" duration="27222000" />
+      <workItem from="1494936495585" duration="12398000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77380000" />
+    <option name="totallyTimeSpent" value="90459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1917" y="0" width="1086" height="1922" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29444444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29444444" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298573" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298573" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298573" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39956093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39956093" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298573" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -508,10 +518,27 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/novotipoeqpt.php</url>
+          <line>27</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/novotipoeqpt.php</url>
+          <line>11</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/TipoEquipamento.php</url>
+          <line>141</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="88" />
+      <option name="time" value="93" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="novopredio.php">
@@ -522,6 +549,9 @@
       </configuration>
       <configuration name="cadastrar.php">
         <watch expression="basename($_SERVER[&quot;SCRIPT_FILENAME&quot;], '.php')" language="PHP" />
+      </configuration>
+      <configuration name="novotipoeqpt.php">
+        <watch expression="strval(time(null)) . '.' . end(explode('.',$_FILES['tipoeqpt-img']['name']))" language="PHP" />
       </configuration>
       <configuration name="sel_responsavel.php">
         <watch expression="$ret[$i]-&gt;uidNumber" language="PHP" />
@@ -535,23 +565,12 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cadastrar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="9" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sel_sala.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
           <folding>
             <element signature="e#6#93#0#PHP" expanded="true" />
-            <marker date="1494868967525" expanded="false" signature="3599:3606" ph="×" />
-            <marker date="1494868967525" expanded="false" signature="5178:5185" ph="×" />
-            <marker date="1494868967525" expanded="false" signature="6756:6763" ph="×" />
           </folding>
         </state>
       </provider>
@@ -606,9 +625,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
           <caret line="18" column="33" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="18" selection-end-column="33" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -645,9 +662,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="16" column="84" lean-forward="false" selection-start-line="16" selection-start-column="84" selection-end-line="16" selection-end-column="84" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -680,16 +695,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="752">
-          <caret line="47" column="11" lean-forward="false" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
-          <folding>
-            <element signature="e#6#92#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -710,7 +715,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#6#93#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -785,7 +792,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
           <caret line="2" column="1" lean-forward="false" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -793,9 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc;n#showAlert#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -837,16 +840,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/sel_sala.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1696">
-          <caret line="108" column="0" lean-forward="false" selection-start-line="108" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Usuario.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="523">
@@ -883,10 +876,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sel_resp.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
+        <state relative-caret-position="720">
           <caret line="50" column="10" lean-forward="false" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
           <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
+            <element signature="e#6#93#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -907,37 +900,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sel_sala.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
-            <marker date="1494868967525" expanded="false" signature="3599:3606" ph="×" />
-            <marker date="1494868967525" expanded="false" signature="5178:5185" ph="×" />
-            <marker date="1494868967525" expanded="false" signature="6756:6763" ph="×" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Predio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="83" column="21" lean-forward="true" selection-start-line="80" selection-start-column="8" selection-end-line="83" selection-end-column="21" />
-          <folding>
-            <marker date="1494607265563" expanded="true" signature="857:895" ph="SELECT * FRO... sala" />
-            <marker date="1494607265563" expanded="true" signature="1421:1441" ph="SELECT * FRO... predio" />
-            <marker date="1494607265563" expanded="true" signature="2108:2155" ph="SELECT nome,... predio" />
-            <marker date="1494607265563" expanded="true" signature="2735:2783" ph="INSERT INTO predio... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -957,41 +924,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TipoEquipamento.php">
+    <entry file="file://$PROJECT_DIR$/gettipos.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="723">
-          <caret line="126" column="30" lean-forward="true" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
+        <state relative-caret-position="336">
+          <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
           <folding>
-            <marker date="1494875543309" expanded="true" signature="1833:1855" ph="SELECT * FRO... tipoeqpt" />
+            <element signature="e#6#93#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/cadastrar.js">
+    <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="13" column="72" lean-forward="false" selection-start-line="13" selection-start-column="72" selection-end-line="13" selection-end-column="72" />
+        <state relative-caret-position="384">
+          <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/sel_sala.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="126" column="3" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="126" selection-end-column="3" />
           <folding>
             <element signature="e#0#46#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cadastrar.php">
+    <entry file="file://$PROJECT_DIR$/js/cadastrar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="43" column="17" lean-forward="true" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="572">
+          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#46#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gettipos.php">
+    <entry file="file://$PROJECT_DIR$/Predio.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+        <state relative-caret-position="451">
+          <caret line="90" column="42" lean-forward="true" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
+          <folding>
+            <marker date="1494607265563" expanded="true" signature="857:895" ph="SELECT * FRO... sala" />
+            <marker date="1494607265563" expanded="true" signature="1421:1441" ph="SELECT * FRO... predio" />
+            <marker date="1494607265563" expanded="true" signature="2108:2155" ph="SELECT nome,... predio" />
+            <marker date="1494607265563" expanded="true" signature="2735:2783" ph="INSERT INTO predio... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novotipoeqpt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
+          <folding>
+            <element signature="e#6#94#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TipoEquipamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="707">
+          <caret line="150" column="65" lean-forward="false" selection-start-line="150" selection-start-column="65" selection-end-line="150" selection-end-column="65" />
+          <folding>
+            <marker date="1494949101873" expanded="true" signature="1833:1855" ph="SELECT * FRO... tipoeqpt" />
+            <marker date="1494949101873" expanded="true" signature="3056:3112" ph="INSERT INTO tipoeqpt... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sel_sala.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-491">
+          <caret line="108" column="57" lean-forward="false" selection-start-line="108" selection-start-column="57" selection-end-line="108" selection-end-column="57" />
           <folding>
             <element signature="e#6#93#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cadastrar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="150" column="26" lean-forward="true" selection-start-line="150" selection-start-column="26" selection-end-line="150" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>

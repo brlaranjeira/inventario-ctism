@@ -138,4 +138,29 @@ class TipoEquipamento {
         return $ret;
     }
 
+    public function save() {
+        require_once ("lib/ConexaoBD.php");
+        $conn = ConexaoBD::getConnection();
+        if ($conn->inTransaction()) {
+            return false;
+        }
+        $conn->beginTransaction();
+        if (isset($this->id)) { //update
+            //TODO: UPDATE
+        } else { //insert
+            $sql = 'INSERT INTO tipoeqpt (nome,descricao,img) values (?,?,?)';
+            $statement = $conn->prepare($sql);
+            if (!$statement->execute(array($this->nome,$this->descricao,$this->img))) {
+                $conn->rollBack();
+                return false;
+            }
+            $this->id = $conn->lastInsertId();
+            if ($conn->commit()) {
+                return $this->id;
+            }
+            $conn->rollBack();
+            return false;
+        }
+    }
+
 }

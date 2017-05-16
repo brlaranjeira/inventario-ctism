@@ -138,7 +138,7 @@ CREATE TABLE `sala` (
   UNIQUE KEY `sala_id_uindex` (`id`),
   KEY `sala_predio_id_fk` (`id_predio`),
   CONSTRAINT `sala_predio_id_fk` FOREIGN KEY (`id_predio`) REFERENCES `predio` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -147,7 +147,7 @@ CREATE TABLE `sala` (
 
 LOCK TABLES `sala` WRITE;
 /*!40000 ALTER TABLE `sala` DISABLE KEYS */;
-INSERT INTO `sala` VALUES (1,1,'142','Departamento Técnico'),(2,1,'111','Sala XYZ'),(3,2,'321','Sala Teste'),(8,1,'001','Portaria'),(9,1,'x','nova sala'),(10,1,'987897','456564'),(11,1,'bolo','chocolate'),(12,4,'302','Professores');
+INSERT INTO `sala` VALUES (1,1,'142','Departamento Técnico'),(2,1,'111','Sala XYZ'),(3,2,'321','Sala Teste'),(8,1,'001','Portaria'),(9,1,'x','nova sala'),(10,1,'987897','456564'),(11,1,'bolo','chocolate'),(12,4,'302','Professores'),(13,1,'PN','Prédio novo');
 /*!40000 ALTER TABLE `sala` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -166,7 +166,7 @@ CREATE TABLE `tipoeqpt` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `tipoeqpt_id_uindex` (`id`),
   UNIQUE KEY `tipoeqpt_nome_uindex` (`nome`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -175,7 +175,7 @@ CREATE TABLE `tipoeqpt` (
 
 LOCK TABLES `tipoeqpt` WRITE;
 /*!40000 ALTER TABLE `tipoeqpt` DISABLE KEYS */;
-INSERT INTO `tipoeqpt` VALUES (1,'Switch','Equipamento de rede','tp-1.jpg'),(2,'HD Externo','Equipamento de armazenamento','tp-2.jpg');
+INSERT INTO `tipoeqpt` VALUES (1,'Switch','Equipamento de rede','tp-1.jpg'),(2,'HD Externo','Equipamento de armazenamento','tp-2.jpg'),(3,'Armário','Equipamento de guardar os outros equipamentos','1494949128.jpg'),(4,'Filtro','Ahjskz','1494949411.jpg');
 /*!40000 ALTER TABLE `tipoeqpt` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -188,4 +188,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-15 18:03:42
+-- Dump completed on 2017-05-16 13:47:56
