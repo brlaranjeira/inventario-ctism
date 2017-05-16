@@ -33,7 +33,7 @@ class Container
      * @param string $descricao
      */
     public function __construct($id, $sala, $cod, $descricao) {
-        require_once ('Sala.php');
+        require_once('Sala.php');
         $this->id = $id;
         $this->sala = is_object($sala) ? $sala : Sala::getById($sala);
         $this->cod = $cod;
@@ -45,7 +45,7 @@ class Container
      * @return Container[]
      */
     public static function getAll() {
-        require_once ("lib/ConexaoBD.php");
+        require_once("lib/ConexaoBD.php");
         $sql = 'SELECT * FROM container';
         $conn = ConexaoBD::getConnection();
         $statement = $conn->prepare($sql);
@@ -63,7 +63,7 @@ class Container
      * @return Container
      */
     public static function getById($id) {
-        require_once ("lib/ConexaoBD.php");
+        require_once("lib/ConexaoBD.php");
         $sql = 'SELECT id_sala, cod, descricao FROM container WHERE id = ?';
         $conn = ConexaoBD::getConnection();
         $statement = $conn->prepare($sql);
@@ -76,7 +76,7 @@ class Container
      * @return string
      */
     public function asJSON() {
-        require_once ('Sala.php');
+        require_once('Sala.php');
         //$id, $predio, $nro, $descricao
         $json = '{ "id": "' . $this->id . '",';
         $json .= '"sala": ' . $this->sala->asJSON() . ',';
@@ -150,8 +150,8 @@ class Container
     }
 
     public function save() {
-        require_once ("lib/ConexaoBD.php");
-        require_once ("Sala.php");
+        require_once("lib/ConexaoBD.php");
+        require_once("Sala.php");
         $conn = ConexaoBD::getConnection();
         if ($conn->inTransaction()) {
             return false;

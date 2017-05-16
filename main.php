@@ -22,14 +22,16 @@ if ($usuario == null) {
 </head>
 <body>
     <? include 'header.php'; ?>
-    <div class="row">
-    <?
-        $paginas = Paginas::getAllowedPages($usuario);
-        foreach ($paginas as $pagina) { ?>
-            <div class="col-xs-12 text-center">
-                <a class="" href="<?=$pagina['id']?>.php"><?=$pagina['nome']?></a>
-            </div>
-        <? } ?>
+    <div class="container-fluid">
+        <div class="row">
+        <?
+            $paginas = Paginas::getAllowedPages($usuario);
+            foreach ($paginas as $pagina) { ?>
+                <div class="col-xs-12 text-center">
+                    <a class="" href="<?=$pagina['id']?>.php"><?=$pagina['nome']?></a>
+                </div>
+            <? } ?>
+        </div>
     </div>
     <? include 'footer.php';?>
 </body>

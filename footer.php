@@ -6,4 +6,7 @@
  * Time: 3:18 PM
  */
 
-
+?>
+<footer class="pull-right">
+    CTISM - Copyleft 2017
+</footer>

@@ -46,8 +46,8 @@ class Predio {
      * @return Sala[] todas as salas do predio
      */
     public function getSalas() {
-        require_once ("lib/ConexaoBD.php");
-        require_once ("Sala.php");
+        require_once("lib/ConexaoBD.php");
+        require_once("Sala.php");
         $sql = 'SELECT * FROM sala WHERE id_predio = ?';
         $conn = ConexaoBD::getConnection();
         $statement = $conn->prepare($sql);
@@ -64,7 +64,7 @@ class Predio {
      * @return Predio[] todos os predios
      */
     public static function getAll() {
-        require_once ("lib/ConexaoBD.php");
+        require_once("lib/ConexaoBD.php");
         $sql = 'SELECT * FROM predio';
         $conn = ConexaoBD::getConnection();
         $statement = $conn->prepare($sql);
@@ -85,7 +85,7 @@ class Predio {
     }
 
     public static function getById($id) {
-        require_once ("lib/ConexaoBD.php");
+        require_once("lib/ConexaoBD.php");
         $sql = 'SELECT nome, descricao FROM predio WHERE id = ?';
         $conn = ConexaoBD::getConnection();
         $statement = $conn->prepare($sql);
@@ -95,7 +95,7 @@ class Predio {
     }
 
     public function save() {
-        require_once ("lib/ConexaoBD.php");
+        require_once("lib/ConexaoBD.php");
         $conn = ConexaoBD::getConnection();
         if ($conn->inTransaction()) {
             return false;

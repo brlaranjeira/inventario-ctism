@@ -5,11 +5,12 @@
  * Date: 5/11/17
  * Time: 3:16 PM
  */
+error_reporting(E_ALL);
 require_once ('lib/Usuario.php');
 require_once ('lib/Paginas.php');
-require_once ('Predio.php');
-require_once ('Sala.php');
-require_once ('Container.php');
+require_once('dao/Predio.php');
+require_once('dao/Sala.php');
+require_once('dao/Container.php');
 Paginas::forcaSeguranca();
 
 ?>
@@ -20,7 +21,7 @@ Paginas::forcaSeguranca();
     <link rel="stylesheet" href="css/jquery/jquery-ui.min.css">
     <link rel="stylesheet" href="css/inventario.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/sel_sala.css">
+    <link rel="stylesheet" href="css/cadastrar.css">
     <title><?=ConfigClass::sysName?></title>
 </head>
 <body>
@@ -43,8 +44,9 @@ $container = isset($_SESSION['ctism_inventario_container']) ? Container::getById
 $resp = new Usuario($_SESSION['ctism_inventario_responsavel']);
 
 ?>
+<div class="container-fluid">
 <div class="row">
-    <div class="col-xs-12 col-md-offset-1 col-md-10">
+    <div class="col-xs-12 col-md-6">
         <div class="form-group">
             <label>Prédio/Sala/Contêiner</label>
             <div class="input-group">
@@ -61,9 +63,7 @@ $resp = new Usuario($_SESSION['ctism_inventario_responsavel']);
             </div>
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-xs-12 col-md-offset-1 col-md-10">
+    <div class="col-xs-12 col-md-6">
         <div class="form-group">
             <label>Responsável</label>
             <div class="input-group">
@@ -77,86 +77,112 @@ $resp = new Usuario($_SESSION['ctism_inventario_responsavel']);
     </div>
 </div>
 
-<form id="form-cadastro-equipamento" method="post" action="novoequipamento.php">
+<form id="form-cadastro-equipamento" method="post" enctype="multipart/form-data" action="novoequipamento.php">
+    <input type="hidden" name="sala" value="<?=$sala->getId()?>">
+    <? if (isset($container)) { ?>
+        <input type="hidden" name="container" value="<?=$container->getId()?>">
+    <? } ?>
+    <input type="hidden" name="responsavel" value="<?=$resp->getUid()?>">
     <div class="row">
-        <div class="col-xs-12 col-md-10 col-md-offset-1">
-            <div class="form-group">
-                <label for="tipoeqpt">Tipo de equipamento</label>
-                <div class="input-group">
-                    <input id="tipoeqpt" name="tipoeqpt" type="text" class="form-control">
-                    <input id="idtipoeqpt" type="hidden" name="idtipoeqpt"/>
-                    <span id="span-add-tipoeqpt" class="span-add input-group-addon" data-toggle="modal" data-target="#modal-add-tipoeqpt"><i class="fa fa-plus"></i></span>
-                </div>
+        <div class="col-xs-12 col-md-6 form-group">
+            <label for="tipoeqpt">Tipo de equipamento</label>
+            <div class="input-group">
+                <input id="tipoeqpt" type="text" class="form-control">
+                <input id="idtipoeqpt" type="hidden" name="idtipoeqpt"/>
+                <input id="tipoeqpt-cpy" type="hidden"/>
+                <span id="span-add-tipoeqpt" class="span-add input-group-addon" data-toggle="modal" data-target="#modal-add-tipoeqpt"><i class="fa fa-plus"></i></span>
             </div>
         </div>
-    </div>
-    <!--
-    <div class="row">
-        <div class="col-xs-12 col-md-10 col-md-offset-1">
-            PATRIMONIO
+        <div class="col-xs-12 col-md-6 form-group">
+            <label for="descricao">Descricao</label>
+            <input type="text" name="descricao" id="descricao" class="form-control">
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-12 col-md-10 col-md-offset-1">
-            NUM SERIE
+        <div class="col-xs-12 col-md-6 form-group">
+            <label for="patrimonio">Patrimônio</label>
+            <input type="text" name="patrimonio" id="patrimonio" class="form-control" />
+        </div>
+        <div class="col-xs-12 col-md-6 form-group">
+            <label for="numserie">Número de série</label>
+            <input type="text" name="numserie" id="numserie" class="form-control">
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-12 col-md-10 col-md-offset-1">
-            DESCRICAO
+        <div class="col-xs-12 col-md-6 form-group">
+            <label for="estado">Estado</label>
+            <select name="estado" id="estado" class="form-control">
+                <?
+                require_once('dao/EstadoEquipamento.php');
+                $estados = EstadoEquipamento::getAll();
+                foreach ($estados as $estado) {
+                    ?><option value="<?=$estado->getId()?>"><?=$estado->getDescricao()?></option><?
+                }
+                ?>
+            </select>
+        </div>
+        <div class="col-xs-12 col-md-6 form-group">
+            <label for="observacao">Observação</label>
+            <input type="text" name="observacao" id="observacao" class="form-control">
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-12 col-md-10 col-md-offset-1">
-            OBS
+        <div class="col-xs-12 form-group">
+            <label for="container-nro">Foto do equipamento</label>
+            <input type="file" capture="camera" accept="image/*" name="foto" id="foto" class="form-control">
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-12 col-md-10 col-md-offset-1">
-            FOTO
+        <div class="col-xs-12 form-group">
+            <button id="btn-novoeqpt" type="button" class="form-control btn btn-block btn-info">Enviar</button>
         </div>
     </div>
-    -->
 </form>
-
+</div>
 
 <div id="modal-add-tipoeqpt" class="modal-add modal fade" role="dialog">
-    <form id="form-novo-tipoeqpt" enctype="multipart/form-data" method="post" >
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Novo tipo de equipamento</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                            <div class="form-group">
-                                <label for="container-nro">Nome</label>
-                                <input type="text" name="tipoeqpt-nome" id="tipoeqpt-nome" class="form-control">
+    <div class="container-fluid">
+        <form id="form-novo-tipoeqpt" enctype="multipart/form-data" method="post">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Novo tipo de equipamento</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12 ">
+                                <div class="form-group">
+                                    <label for="container-nro">Nome</label>
+                                    <input type="text" name="tipoeqpt-nome" id="tipoeqpt-nome" class="form-control">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-md-6">
-                            <div class="form-group">
-                                <label for="container-descricao">Descrição</label>
-                                <input type="text" name="tipoeqpt-descricao" id="tipoeqpt-descricao" class="form-control">
+                        <div class="row">
+                            <div class="col-xs-12 ">
+                                <div class="form-group">
+                                    <label for="container-descricao">Descrição</label>
+                                    <input type="text" name="tipoeqpt-descricao" id="tipoeqpt-descricao" class="form-control">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-md-6">
-                            <div class="form-group">
-                                <label for="container-nro">Imagem</label>
-                                <input type="file" capture="camera" accept="image/*" name="tipoeqpt-img" id="tipoeqpt-img" class="form-control">
+                        <div class="row">
+                            <div class="col-xs-12 ">
+                                <div class="form-group">
+                                    <label for="container-nro">Imagem</label>
+                                    <input type="file" capture="camera" accept="image/*" name="tipoeqpt-img" id="tipoeqpt-img" class="form-control">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                    <button id="btn-novo-tipoeqpt" type="submit" class="btn btn-info">Enviar</button>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                        <button id="btn-novo-tipoeqpt" type="button" class="btn btn-info">Enviar</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
 
 <? include 'footer.php'; ?>

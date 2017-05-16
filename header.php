@@ -11,9 +11,9 @@ require_once ("lib/Usuario.php");
 $usuario = Usuario::restoreFromSession();
 
 ?>
-<div class="row" id="div-header">
-    <div class="col-xs-12">Olá, <?=$usuario->getFullName()?> (<a href="logout.php">sair</a>)</div>
-    <div class="col-xs-12"><a href="main.php">Página Inicial</a></div>
+<div class="page-header">
+    <h4>Olá, <?=$usuario->getFullName()?><small>&nbsp;(<a href="logout.php">sair</a>)</small></h4>
+    <h5><a href="main.php">Página Inicial</a></h5>
 </div>
 <div id="div-alert" class="alert">
     <strong id="div-alert-title"></strong>

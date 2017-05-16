@@ -6,7 +6,7 @@
  * Time: 10:57 AM
  */
 
-require_once ('TipoEquipamento.php');
+require_once('TipoEquipamento.php');
 require_once ('ConfigClass.php');
 
 $nome = $_POST['tipoeqpt-nome'];
@@ -18,11 +18,8 @@ $moveu = move_uploaded_file($_FILES['tipoeqpt-img']['tmp_name'],ConfigClass::dir
 if ($moveu) {
     $novo = new TipoEquipamento(null,$nome,$descricao,$nomeArq);
     if ($novo->save()) {
-        echo 'foi';
+        echo $novo->asJSON();
     } else {
-        //err
+
     }
 }
-//err
-
-//$tipo = new TipoEquipamento(null,)

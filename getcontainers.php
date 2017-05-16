@@ -8,7 +8,7 @@
 
 require_once ('lib/Usuario.php');
 require_once ('lib/Paginas.php');
-require_once ("Sala.php");
+require_once("dao/Sala.php");
 Paginas::forcaSeguranca();
 
 $idSala = $_REQUEST['idsala'];

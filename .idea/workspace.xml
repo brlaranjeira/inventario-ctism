@@ -2,14 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23407a25-293b-49d1-950f-45901aee2d31" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/novotipoeqpt.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dao/Equipamento.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dao/EstadoEquipamento.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/novoequipamento.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scss/cadastrar.scss" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Container.php" afterPath="$PROJECT_DIR$/dao/Container.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Predio.php" afterPath="$PROJECT_DIR$/dao/Predio.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Sala.php" afterPath="$PROJECT_DIR$/dao/Sala.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TipoEquipamento.php" afterPath="$PROJECT_DIR$/dao/TipoEquipamento.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TipoEquipamento.php" afterPath="$PROJECT_DIR$/TipoEquipamento.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cadastrar.php" afterPath="$PROJECT_DIR$/cadastrar.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getcontainers.php" afterPath="$PROJECT_DIR$/getcontainers.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getsalas.php" afterPath="$PROJECT_DIR$/getsalas.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gettipos.php" afterPath="$PROJECT_DIR$/gettipos.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cadastrar.js" afterPath="$PROJECT_DIR$/js/cadastrar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/sel_sala.js" afterPath="$PROJECT_DIR$/js/sel_sala.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/login.php" afterPath="$PROJECT_DIR$/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.php" afterPath="$PROJECT_DIR$/main.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/novasala.php" afterPath="$PROJECT_DIR$/novasala.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/novocontainer.php" afterPath="$PROJECT_DIR$/novocontainer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/novopredio.php" afterPath="$PROJECT_DIR$/novopredio.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/novotipoeqpt.php" afterPath="$PROJECT_DIR$/novotipoeqpt.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sel_resp.php" afterPath="$PROJECT_DIR$/sel_resp.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sel_sala.php" afterPath="$PROJECT_DIR$/sel_sala.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,57 +38,89 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sel_sala.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sel_sala.php">
+      <file leaf-file-name="cadastrar.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cadastrar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-491">
-              <caret line="108" column="57" lean-forward="false" selection-start-line="108" selection-start-column="57" selection-end-line="108" selection-end-column="57" />
+            <state relative-caret-position="738">
+              <caret line="125" column="63" lean-forward="false" selection-start-line="125" selection-start-column="63" selection-end-line="125" selection-end-column="63" />
               <folding>
-                <element signature="e#6#93#0#PHP" expanded="true" />
+                <marker date="1494971890232" expanded="false" signature="5876:5883" ph="×" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cadastrar.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cadastrar.php">
+      <file leaf-file-name="Equipamento.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dao/Equipamento.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="150" column="26" lean-forward="true" selection-start-line="150" selection-start-column="26" selection-end-line="150" selection-end-column="26" />
+            <state relative-caret-position="363">
+              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+              <folding>
+                <marker date="1494974132190" expanded="true" signature="2619:2742" ph="INSERT INTO equipamento... " />
+                <marker date="1494974132190" expanded="true" signature="2619:2794" ph="INSERT INTO equipamento... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EstadoEquipamento.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dao/EstadoEquipamento.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="748">
+              <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+              <folding>
+                <marker date="1494974084350" expanded="true" signature="847:871" ph="SELECT * FRO... estadoeqpt" />
+                <marker date="1494974084350" expanded="true" signature="1386:1431" ph="SELECT descr... estadoeqpt" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Sala.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dao/Sala.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="571">
+              <caret line="61" column="25" lean-forward="true" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+              <folding>
+                <marker date="1494968476690" expanded="true" signature="847:902" ph="SELECT id_pr... sala" />
+                <marker date="1494968476690" expanded="true" signature="2242:2256" ph="SELECT * FRO... predio" />
+                <marker date="1494968476690" expanded="true" signature="2242:2260" ph="SELECT * FRO... sala" />
+                <marker date="1494968476690" expanded="true" signature="2794:2835" ph="SELECT * FRO... container" />
+                <marker date="1494968476690" expanded="true" signature="3942:3999" ph="INSERT INTO sala... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TipoEquipamento.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dao/TipoEquipamento.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="146" column="22" lean-forward="false" selection-start-line="146" selection-start-column="22" selection-end-line="146" selection-end-column="22" />
+              <folding>
+                <marker date="1494970101677" expanded="true" signature="815:865" ph="SELECT nome,... sala" />
+                <marker date="1494970101677" expanded="true" signature="2247:2269" ph="SELECT * FRO... tipoeqpt" />
+                <marker date="1494970101677" expanded="true" signature="3462:3518" ph="INSERT INTO tipoeqpt... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="novoequipamento.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/novoequipamento.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="novotipoeqpt.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/novotipoeqpt.php">
+      <file leaf-file-name="novasala.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/novasala.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-              <folding>
-                <element signature="e#6#94#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sel_sala.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/sel_sala.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="931">
-              <caret line="126" column="3" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="126" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#46#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/login.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+            <state relative-caret-position="112">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -80,48 +129,8 @@
       <file leaf-file-name="cadastrar.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/cadastrar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#46#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TipoEquipamento.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TipoEquipamento.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="707">
-              <caret line="150" column="65" lean-forward="false" selection-start-line="150" selection-start-column="65" selection-end-line="150" selection-end-column="65" />
-              <folding>
-                <marker date="1494949101873" expanded="true" signature="1833:1855" ph="SELECT * FRO... tipoeqpt" />
-                <marker date="1494949101873" expanded="true" signature="3056:3112" ph="INSERT INTO tipoeqpt... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Predio.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Predio.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="451">
-              <caret line="90" column="42" lean-forward="true" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
-              <folding>
-                <marker date="1494607265563" expanded="true" signature="857:895" ph="SELECT * FRO... sala" />
-                <marker date="1494607265563" expanded="true" signature="1421:1441" ph="SELECT * FRO... predio" />
-                <marker date="1494607265563" expanded="true" signature="2108:2155" ph="SELECT nome,... predio" />
-                <marker date="1494607265563" expanded="true" signature="2735:2783" ph="INSERT INTO predio... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConfigClass.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ConfigClass.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+            <state relative-caret-position="48">
+              <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -131,9 +140,21 @@
         <entry file="file://$PROJECT_DIR$/gettipos.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="336">
-              <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+              <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Container.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dao/Container.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="900">
+              <caret line="175" column="9" lean-forward="true" selection-start-line="152" selection-start-column="8" selection-end-line="175" selection-end-column="9" />
               <folding>
-                <element signature="e#6#93#0#PHP" expanded="true" />
+                <marker date="1494968476738" expanded="true" signature="890:913" ph="SELECT * FRO... container" />
+                <marker date="1494968476738" expanded="true" signature="1469:1527" ph="SELECT id_sa... container" />
+                <marker date="1494968476738" expanded="true" signature="3591:3651" ph="INSERT INTO container... " />
               </folding>
             </state>
           </provider>
@@ -151,25 +172,45 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>xdeb</find>
-      <find>has</find>
-      <find>*</find>
-      <find>col-xs-12</find>
-      <find>form_group</find>
-      <find>span-novo</find>
-      <find>span-add-</find>
-      <find>Close</find>
-      <find>sala</find>
-      <find>sala/</find>
-      <find>glyph</find>
-      <find>aa</find>
-      <find>debugger</find>
+      <find>Sal.php</find>
+      <find>Sala.php</find>
+      <find>a</find>
+      <find>c</find>
+      <find>cadas</find>
+      <find>cadast</find>
+      <find>lib</find>
+      <find>lib/C</find>
+      <find>lib/Con</find>
+      <find>lib/Co</find>
+      <find>lib/</find>
+      <find>../lib//</find>
+      <find>../lib/</find>
+      <find>../li</find>
+      <find>../lib</find>
+      <find>req</find>
+      <find>tipo</find>
+      <find>tipoeqpt</find>
+      <find>.</find>
+      <find>../</find>
+      <find>../Con</find>
+      <find>../Conf</find>
+      <find>../Confi</find>
+      <find>t</find>
+      <find>time</find>
+      <find>time(n</find>
+      <find>time(nu</find>
+      <find>time(nul</find>
+      <find>time(null</find>
+      <find>obser</find>
     </findStrings>
     <replaceStrings>
       <replace>form-group</replace>
       <replace>span-add</replace>
       <replace>Fechar</replace>
       <replace>fa fa-plus</replace>
+      <replace>col-xs-12</replace>
+      <replace>lib</replace>
+      <replace>col-xs-12 col-md-6</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -181,12 +222,9 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="/etc/php/7.0/cli/php.ini" />
         <option value="$PROJECT_DIR$/login.html" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/scss/main.scss" />
         <option value="$PROJECT_DIR$/logout.php" />
-        <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/lib/Paginas.php" />
-        <option value="$PROJECT_DIR$/main.php" />
         <option value="$PROJECT_DIR$/container.php" />
         <option value="$PROJECT_DIR$/getsalas.php" />
         <option value="$PROJECT_DIR$/getcontainers.php" />
@@ -200,20 +238,35 @@
         <option value="$PROJECT_DIR$/novocontainer.php" />
         <option value="$PROJECT_DIR$/lib/Usuario.php" />
         <option value="$PROJECT_DIR$/sel_responsavel.php" />
-        <option value="$PROJECT_DIR$/sel_resp.php" />
         <option value="$PROJECT_DIR$/Sala.php" />
         <option value="$PROJECT_DIR$/Container.php" />
-        <option value="$PROJECT_DIR$/sel_sala.php" />
-        <option value="$PROJECT_DIR$/header.php" />
         <option value="$PROJECT_DIR$/ConfigClass.php" />
         <option value="$PROJECT_DIR$/gettiposautocomplete.php" />
-        <option value="$PROJECT_DIR$/gettipos.php" />
-        <option value="$PROJECT_DIR$/login.php" />
         <option value="$PROJECT_DIR$/js/sel_sala.js" />
-        <option value="$PROJECT_DIR$/js/cadastrar.js" />
-        <option value="$PROJECT_DIR$/novotipoeqpt.php" />
+        <option value="$PROJECT_DIR$/main.php" />
+        <option value="$PROJECT_DIR$/login.php" />
+        <option value="$PROJECT_DIR$/css/cadastrar.css" />
+        <option value="$PROJECT_DIR$/scss/cadastrar.scss" />
+        <option value="$PROJECT_DIR$/footer.php" />
+        <option value="$PROJECT_DIR$/header.php" />
+        <option value="$PROJECT_DIR$/cadastraeqpt.php" />
+        <option value="$PROJECT_DIR$/Estado.php" />
+        <option value="$PROJECT_DIR$/EstadoEquipamento.php" />
+        <option value="$PROJECT_DIR$/sel_sala.php" />
+        <option value="$PROJECT_DIR$/sel_resp.php" />
+        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/TipoEquipamento.php" />
+        <option value="$PROJECT_DIR$/novotipoeqpt.php" />
+        <option value="$PROJECT_DIR$/dao/Container.php" />
+        <option value="$PROJECT_DIR$/dao/Predio.php" />
+        <option value="$PROJECT_DIR$/dao/Sala.php" />
+        <option value="$PROJECT_DIR$/js/cadastrar.js" />
+        <option value="$PROJECT_DIR$/gettipos.php" />
+        <option value="$PROJECT_DIR$/dao/TipoEquipamento.php" />
         <option value="$PROJECT_DIR$/cadastrar.php" />
+        <option value="$PROJECT_DIR$/novoequipamento.php" />
+        <option value="$PROJECT_DIR$/dao/EstadoEquipamento.php" />
+        <option value="$PROJECT_DIR$/dao/Equipamento.php" />
       </list>
     </option>
   </component>
@@ -291,7 +344,35 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cpatrimonial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cpatrimonial" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cpatrimonial" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cpatrimonial" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -353,9 +434,14 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dao" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="Constants" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/dao" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -480,12 +566,12 @@
       <workItem from="1494512838490" duration="23467000" />
       <workItem from="1494588598547" duration="19004000" />
       <workItem from="1494846232650" duration="27222000" />
-      <workItem from="1494936495585" duration="12398000" />
+      <workItem from="1494936495585" duration="33355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90459000" />
+    <option name="totallyTimeSpent" value="111416000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1917" y="0" width="1086" height="1922" extended-state="6" />
@@ -495,6 +581,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298573" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -506,7 +593,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298573" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -520,25 +606,29 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/novotipoeqpt.php</url>
-          <line>27</line>
-          <option name="timeStamp" value="90" />
+          <url>file://$PROJECT_DIR$/novoequipamento.php</url>
+          <line>25</line>
+          <option name="timeStamp" value="108" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/novotipoeqpt.php</url>
-          <line>11</line>
-          <option name="timeStamp" value="91" />
+          <url>file://$PROJECT_DIR$/dao/Equipamento.php</url>
+          <line>90</line>
+          <option name="timeStamp" value="112" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/TipoEquipamento.php</url>
-          <line>141</line>
-          <option name="timeStamp" value="92" />
-        </line-breakpoint>
+        <breakpoint enabled="true" type="php-exception">
+          <properties name="Exception" />
+          <option name="timeStamp" value="109" />
+        </breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="93" />
+      <default-breakpoints>
+        <breakpoint enabled="true" type="javascript-exception">
+          <properties />
+        </breakpoint>
+      </default-breakpoints>
+      <option name="time" value="113" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="novopredio.php">
@@ -551,7 +641,7 @@
         <watch expression="basename($_SERVER[&quot;SCRIPT_FILENAME&quot;], '.php')" language="PHP" />
       </configuration>
       <configuration name="novotipoeqpt.php">
-        <watch expression="strval(time(null)) . '.' . end(explode('.',$_FILES['tipoeqpt-img']['name']))" language="PHP" />
+        <watch expression="$novo-&gt;asJSON()" language="PHP" />
       </configuration>
       <configuration name="sel_responsavel.php">
         <watch expression="$ret[$i]-&gt;uidNumber" language="PHP" />
@@ -565,62 +655,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/sel_sala.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/sel_sala.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getcontainers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="22" column="10" lean-forward="true" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sala.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2608">
-          <caret line="163" column="21" lean-forward="true" selection-start-line="157" selection-start-column="8" selection-end-line="163" selection-end-column="21" />
-          <folding>
-            <marker date="1494855368373" expanded="true" signature="849:904" ph="SELECT id_pr... sala" />
-            <marker date="1494855368373" expanded="true" signature="2245:2259" ph="SELECT * FRO... predio" />
-            <marker date="1494855368373" expanded="true" signature="2245:2263" ph="SELECT * FRO... sala" />
-            <marker date="1494855368373" expanded="true" signature="2799:2840" ph="SELECT * FRO... container" />
-            <marker date="1494855368373" expanded="true" signature="3950:4007" ph="INSERT INTO sala... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Container.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="75" column="32" lean-forward="true" selection-start-line="75" selection-start-column="32" selection-end-line="75" selection-end-column="32" />
-          <folding>
-            <marker date="1494855602187" expanded="true" signature="892:915" ph="SELECT * FRO... container" />
-            <marker date="1494855602187" expanded="true" signature="1472:1530" ph="SELECT id_sa... container" />
-            <marker date="1494855602187" expanded="true" signature="3597:3657" ph="INSERT INTO container... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/getsalas.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -695,14 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="7" lean-forward="false" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
@@ -731,14 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Paginas.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
@@ -754,16 +772,6 @@
             <marker date="1494527729030" expanded="true" signature="1650:1780" ph="SELECT DISTI... permissao" />
             <marker date="1494527729030" expanded="true" signature="1650:1851" ph="SELECT DISTI... permissao" />
             <marker date="1494527729030" expanded="true" signature="1650:1852" ph="SELECT DISTI... permissao" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="21" column="7" lean-forward="false" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -799,16 +807,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/novasala.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,42 +846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sala.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="53" column="71" lean-forward="false" selection-start-line="47" selection-start-column="8" selection-end-line="53" selection-end-column="71" />
-          <folding>
-            <marker date="1494855368373" expanded="true" signature="849:904" ph="SELECT id_pr... sala" />
-            <marker date="1494855368373" expanded="true" signature="2245:2259" ph="SELECT * FRO... predio" />
-            <marker date="1494855368373" expanded="true" signature="2245:2263" ph="SELECT * FRO... sala" />
-            <marker date="1494855368373" expanded="true" signature="2799:2840" ph="SELECT * FRO... container" />
-            <marker date="1494855368373" expanded="true" signature="3950:4007" ph="INSERT INTO sala... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Container.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="71" column="74" lean-forward="false" selection-start-line="71" selection-start-column="74" selection-end-line="71" selection-end-column="74" />
-          <folding>
-            <marker date="1494855602187" expanded="true" signature="892:915" ph="SELECT * FRO... container" />
-            <marker date="1494855602187" expanded="true" signature="1472:1530" ph="SELECT id_sa... container" />
-            <marker date="1494855602187" expanded="true" signature="3597:3657" ph="INSERT INTO container... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sel_resp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="50" column="10" lean-forward="false" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/bootstrap/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
@@ -896,14 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
           <caret line="266" column="18" lean-forward="false" selection-start-line="266" selection-start-column="18" selection-end-line="266" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="19" column="37" lean-forward="false" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -924,93 +878,210 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gettipos.php">
+    <entry file="file://$PROJECT_DIR$/js/sel_sala.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="931">
+          <caret line="126" column="3" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="126" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="35" column="21" lean-forward="true" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="29" column="2" lean-forward="true" selection-start-line="29" selection-start-column="2" selection-end-line="29" selection-end-column="2" />
+        <state relative-caret-position="547">
+          <caret line="41" column="48" lean-forward="true" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/sel_sala.js">
+    <entry file="file://$PROJECT_DIR$/scss/cadastrar.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="126" column="3" lean-forward="true" selection-start-line="106" selection-start-column="0" selection-end-line="126" selection-end-column="3" />
+        <state relative-caret-position="144">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/cadastrar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="9" lean-forward="true" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
           <folding>
-            <element signature="e#0#46#0" expanded="false" />
+            <element signature="e#6#93#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/cadastrar.js">
+    <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="55" column="0" lean-forward="true" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="20" column="6" lean-forward="true" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
           <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Predio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="90" column="42" lean-forward="true" selection-start-line="90" selection-start-column="42" selection-end-line="90" selection-end-column="42" />
-          <folding>
-            <marker date="1494607265563" expanded="true" signature="857:895" ph="SELECT * FRO... sala" />
-            <marker date="1494607265563" expanded="true" signature="1421:1441" ph="SELECT * FRO... predio" />
-            <marker date="1494607265563" expanded="true" signature="2108:2155" ph="SELECT nome,... predio" />
-            <marker date="1494607265563" expanded="true" signature="2735:2783" ph="INSERT INTO predio... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/novotipoeqpt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="27" column="36" lean-forward="true" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TipoEquipamento.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="707">
-          <caret line="150" column="65" lean-forward="false" selection-start-line="150" selection-start-column="65" selection-end-line="150" selection-end-column="65" />
-          <folding>
-            <marker date="1494949101873" expanded="true" signature="1833:1855" ph="SELECT * FRO... tipoeqpt" />
-            <marker date="1494949101873" expanded="true" signature="3056:3112" ph="INSERT INTO tipoeqpt... " />
+            <element signature="e#250#256#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sel_sala.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-491">
-          <caret line="108" column="57" lean-forward="false" selection-start-line="108" selection-start-column="57" selection-end-line="108" selection-end-column="57" />
+        <state relative-caret-position="611">
+          <caret line="83" column="57" lean-forward="false" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sel_resp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="57" column="15" lean-forward="true" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novotipoeqpt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/Predio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="97" column="22" lean-forward="false" selection-start-line="97" selection-start-column="22" selection-end-line="97" selection-end-column="22" />
           <folding>
-            <element signature="e#6#93#0#PHP" expanded="true" />
+            <marker date="1494968476770" expanded="true" signature="855:893" ph="SELECT * FRO... sala" />
+            <marker date="1494968476770" expanded="true" signature="1418:1438" ph="SELECT * FRO... predio" />
+            <marker date="1494968476770" expanded="true" signature="2104:2151" ph="SELECT nome,... predio" />
+            <marker date="1494968476770" expanded="true" signature="2730:2778" ph="INSERT INTO predio... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cadastrar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/TipoEquipamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="146" column="22" lean-forward="false" selection-start-line="146" selection-start-column="22" selection-end-line="146" selection-end-column="22" />
+          <folding>
+            <marker date="1494970101677" expanded="true" signature="815:865" ph="SELECT nome,... sala" />
+            <marker date="1494970101677" expanded="true" signature="2247:2269" ph="SELECT * FRO... tipoeqpt" />
+            <marker date="1494970101677" expanded="true" signature="3462:3518" ph="INSERT INTO tipoeqpt... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cadastrar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="150" column="26" lean-forward="true" selection-start-line="150" selection-start-column="26" selection-end-line="150" selection-end-column="26" />
+        <state relative-caret-position="738">
+          <caret line="125" column="63" lean-forward="false" selection-start-line="125" selection-start-column="63" selection-end-line="125" selection-end-column="63" />
+          <folding>
+            <marker date="1494971890232" expanded="false" signature="5876:5883" ph="×" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/Container.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="175" column="9" lean-forward="true" selection-start-line="152" selection-start-column="8" selection-end-line="175" selection-end-column="9" />
+          <folding>
+            <marker date="1494968476738" expanded="true" signature="890:913" ph="SELECT * FRO... container" />
+            <marker date="1494968476738" expanded="true" signature="1469:1527" ph="SELECT id_sa... container" />
+            <marker date="1494968476738" expanded="true" signature="3591:3651" ph="INSERT INTO container... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gettipos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="26" column="10" lean-forward="true" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/Sala.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="61" column="25" lean-forward="true" selection-start-line="61" selection-start-column="25" selection-end-line="61" selection-end-column="25" />
+          <folding>
+            <marker date="1494968476690" expanded="true" signature="847:902" ph="SELECT id_pr... sala" />
+            <marker date="1494968476690" expanded="true" signature="2242:2256" ph="SELECT * FRO... predio" />
+            <marker date="1494968476690" expanded="true" signature="2242:2260" ph="SELECT * FRO... sala" />
+            <marker date="1494968476690" expanded="true" signature="2794:2835" ph="SELECT * FRO... container" />
+            <marker date="1494968476690" expanded="true" signature="3942:3999" ph="INSERT INTO sala... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novasala.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/EstadoEquipamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="64" column="17" lean-forward="true" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+          <folding>
+            <marker date="1494974084350" expanded="true" signature="847:871" ph="SELECT * FRO... estadoeqpt" />
+            <marker date="1494974084350" expanded="true" signature="1386:1431" ph="SELECT descr... estadoeqpt" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/novoequipamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/Equipamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding>
+            <marker date="1494974132190" expanded="true" signature="2619:2742" ph="INSERT INTO equipamento... " />
+            <marker date="1494974132190" expanded="true" signature="2619:2794" ph="INSERT INTO equipamento... " />
+          </folding>
         </state>
       </provider>
     </entry>

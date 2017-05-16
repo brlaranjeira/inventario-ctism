@@ -1,0 +1,8 @@
+.li-autocomplete {
+  z-index: 2; }
+  .li-autocomplete.li-row-odd {
+    background: #61bbff; }
+  .li-autocomplete:not(.li-row-odd) {
+    background: #b4ced8; }
+
+/*# sourceMappingURL=cadastrar.css.map */

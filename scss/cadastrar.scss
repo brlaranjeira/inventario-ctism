@@ -1,0 +1,9 @@
+.li-autocomplete {
+  z-index: 2;
+  &.li-row-odd {
+    background: #61bbff;
+  }
+  &:not(.li-row-odd) {
+    background: #b4ced8;
+  }
+}

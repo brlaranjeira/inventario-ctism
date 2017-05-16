@@ -20,10 +20,10 @@ if (!empty($_POST)) {
             $usuario->saveToSession();
             header('Location: main.php');
         } else {
-            $msg = 'usuário nao autorizado.';
+            $msg = 'Usuário nao autorizado.';
         }
     } else {
-        $msg = 'usuário inexistente ou senha incorreta.';
+        $msg = 'Usuário inexistente ou senha incorreta.';
     }
 
 }
@@ -33,32 +33,36 @@ if (!empty($_POST)) {
         <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"/>
     </head>
     <body>
-    <form id="form-login" action="login.php" method="post">
-        <? if (isset($msg)) { ?>
+    <div class="jumbotron">
+        <h2>Inventário CTISM</h2>
+    </div>
+    <div class="container-fluid">
+        <form id="form-login" action="login.php" method="post">
+            <? if (strlen($msg) > 0) { ?>
+                <div class="alert alert-danger">
+                    <strong><?=$msg?></strong>
+                </div>
+            <? } ?>
             <div class="row">
-                <div class="col-xs-12">
-                    <?=$msg?><br/>
+                <div class="col-xs-12 form-group">
+                    <label for="usr">Usuário:</label>
+                    <input class="form-control" type="text" name="usr"/>
                 </div>
             </div>
-        <? } ?>
-        <div class="row">
-            <div class="col-xs-12 form-group">
-                <label for="usr">Usuário:</label>
-                <input type="text" name="usr"/>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    <label for="pw">Senha:</label>
+                    <input class="form-control" type="password" name="pw"/>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 form-group">
-                <label for="pw">Senha:</label>
-                <input type="password" name="pw"/>
+            <div class="row">
+                <div class="col-xs-12 form-group">
+                    <button type="submit" class="form-control btn btn-info">Entrar</button>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12 form-group">
-                <button type="submit" class="btn btn-info">Entrar</button>
-            </div>
-        </div>
 
-    </form>
+        </form>
+    </div>
     </body>
+    <? include 'footer.php'; ?>
     </html>

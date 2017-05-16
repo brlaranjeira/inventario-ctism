@@ -45,6 +45,74 @@ INSERT INTO `container` VALUES (1,1,'A','Armário A'),(2,1,'B','Armário B'),(3,
 UNLOCK TABLES;
 
 --
+-- Table structure for table `equipamento`
+--
+
+DROP TABLE IF EXISTS `equipamento`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `equipamento` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `id_sala` bigint(20) NOT NULL,
+  `id_container` bigint(20) DEFAULT NULL,
+  `responsavel` varchar(50) NOT NULL,
+  `id_tipoeqpt` bigint(20) NOT NULL,
+  `descricao` varchar(150) DEFAULT NULL,
+  `patrimonio` varchar(10) DEFAULT NULL,
+  `numserie` varchar(100) DEFAULT NULL,
+  `id_estadoeqpt` bigint(20) NOT NULL,
+  `obs` varchar(150) DEFAULT NULL,
+  `foto` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `equipamento_id_uindex` (`id`),
+  KEY `equipamento_sala_id_fk` (`id_sala`),
+  KEY `equipamento_container_id_fk` (`id_container`),
+  KEY `equipamento_tipoeqpt_id_fk` (`id_tipoeqpt`),
+  KEY `equipamento_estadoeqpt_id_fk` (`id_estadoeqpt`),
+  CONSTRAINT `equipamento_estadoeqpt_id_fk` FOREIGN KEY (`id_estadoeqpt`) REFERENCES `estadoeqpt` (`id`) ON UPDATE CASCADE,
+  CONSTRAINT `equipamento_container_id_fk` FOREIGN KEY (`id_container`) REFERENCES `container` (`id`) ON UPDATE CASCADE,
+  CONSTRAINT `equipamento_sala_id_fk` FOREIGN KEY (`id_sala`) REFERENCES `sala` (`id`) ON UPDATE CASCADE,
+  CONSTRAINT `equipamento_tipoeqpt_id_fk` FOREIGN KEY (`id_tipoeqpt`) REFERENCES `tipoeqpt` (`id`) ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `equipamento`
+--
+
+LOCK TABLES `equipamento` WRITE;
+/*!40000 ALTER TABLE `equipamento` DISABLE KEYS */;
+INSERT INTO `equipamento` VALUES (2,1,1,'gisasfr',6,'mesa da portaria','123456','12345678910111213',1,'alguma observação','1494974139.jpg'),(3,1,1,'gisasfr',17,'projetor de sala de aula','123231','7879879',1,'projeta imagens','1494974261.jpg');
+/*!40000 ALTER TABLE `equipamento` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `estadoeqpt`
+--
+
+DROP TABLE IF EXISTS `estadoeqpt`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `estadoeqpt` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `descricao` varchar(30) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `estadoeqpt_id_uindex` (`id`),
+  UNIQUE KEY `estadoeqpt_descricao_uindex` (`descricao`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `estadoeqpt`
+--
+
+LOCK TABLES `estadoeqpt` WRITE;
+/*!40000 ALTER TABLE `estadoeqpt` DISABLE KEYS */;
+INSERT INTO `estadoeqpt` VALUES (1,'Ativo'),(2,'Inativo');
+/*!40000 ALTER TABLE `estadoeqpt` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `pagina`
 --
 
@@ -166,7 +234,7 @@ CREATE TABLE `tipoeqpt` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `tipoeqpt_id_uindex` (`id`),
   UNIQUE KEY `tipoeqpt_nome_uindex` (`nome`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -175,7 +243,7 @@ CREATE TABLE `tipoeqpt` (
 
 LOCK TABLES `tipoeqpt` WRITE;
 /*!40000 ALTER TABLE `tipoeqpt` DISABLE KEYS */;
-INSERT INTO `tipoeqpt` VALUES (1,'Switch','Equipamento de rede','tp-1.jpg'),(2,'HD Externo','Equipamento de armazenamento','tp-2.jpg'),(3,'Armário','Equipamento de guardar os outros equipamentos','1494949128.jpg'),(4,'Filtro','Ahjskz','1494949411.jpg');
+INSERT INTO `tipoeqpt` VALUES (1,'Switch','Equipamento de rede','tp-1.jpg'),(2,'HD Externo','Equipamento de armazenamento','tp-2.jpg'),(3,'Armário','Equipamento de guardar os outros equipamentos','1494949128.jpg'),(4,'Filtro','Ahjskz','1494949411.jpg'),(5,'Computador','máquina de fazer contas','1494963532.jpg'),(6,'mesa','equipamento para colocar coisas em cima','1494965654.jpg'),(17,'Projetor','equipamento para sala de aula','1494967338.jpg'),(18,'Quadro','material para aulas','1494967391.jpg'),(19,'Quadro222','material teste','1494967407.jpg');
 /*!40000 ALTER TABLE `tipoeqpt` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -188,4 +256,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-16 13:47:56
+-- Dump completed on 2017-05-16 19:38:45

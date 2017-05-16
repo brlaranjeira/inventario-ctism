@@ -33,28 +33,31 @@ if (sizeof($_POST) > 0) {
 </head>
 <body>
 <? include 'header.php'; ?>
-
-<form id="form-responsavel" method="post" action="">
-    <div class="row">
-        <div class="col-xs-12 col-md-offset-1 col-md-10">
-            <div class="form-group">
-                <label for="responsavel">Responsável</label>
-                <select class="form-control" name="responsavel" id="responsavel">
-                    <?
-                    $all = Usuario::getAllFromGroup(array(Grupos::FUNCIONARIOS,Grupos::PROFESSORES));
-                    foreach ($all as $usr) {
-                        ?> <option value="<?=$usr->getUid()?>"><?=$usr->getFullName()?></option> <?
-                    }
-                    ?>
-                </select>
-        </div>
+    <div class="container-fluid">
+        <form id="form-responsavel" method="post" action="">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="responsavel">Responsável</label>
+                        <select class="form-control" name="responsavel" id="responsavel">
+                            <?
+                            $usuarios = Usuario::getAllFromGroup(array(Grupos::FUNCIONARIOS,Grupos::PROFESSORES));
+                            foreach ($usuarios as $usuario) {
+                                ?> <option value="<?=$usuario->getUid()?>"><?=$usuario->getFullName()?></option> <?
+                            }
+                            ?>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-xs-12">
+                    <button type="submit" class="form-control btn btn-info btn-block">Selecionar</button>
+                </div>
+            </div>
+        </form>
     </div>
-    <div class="row">
-        <div class="col-xs-12 col-md-offset-1 col-md-10">
-            <button type="submit" class="btn btn-success btn-block">Selecionar</button>
-        </div>
-    </div>
-</form>
+</body>
 
 
 <? include 'footer.php'; ?>
@@ -63,5 +66,4 @@ if (sizeof($_POST) > 0) {
 <script type="application/javascript" language="javascript" src="js/jquery/jquery.mask.min.js"></script>
 <script type="application/javascript" language="javascript" src="js/bootstrap/bootstrap.min.js"></script>
 <script type="application/javascript" language="javascript" src="js/inventario.js"></script>
-<script type="application/javascript" language="javascript" src="js/sel_responsavel.js"></script>
 </html>

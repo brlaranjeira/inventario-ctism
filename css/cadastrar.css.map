@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,gBAAiB;EACf,OAAO,EAAE,CAAC;EACV,2BAAa;IACX,UAAU,EAAE,OAAO;EAErB,iCAAmB;IACjB,UAAU,EAAE,OAAO",
+"sources": ["../scss/cadastrar.scss"],
+"names": [],
+"file": "cadastrar.css"
+}

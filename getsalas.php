@@ -8,7 +8,7 @@
 
 require_once ('lib/Usuario.php');
 require_once ('lib/Paginas.php');
-require_once ("Predio.php");
+require_once("dao/Predio.php");
 Paginas::forcaSeguranca();
 $idPredio = $_REQUEST['idpredio'];
 $predio = Predio::getById($idPredio);

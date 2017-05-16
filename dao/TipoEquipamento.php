@@ -40,6 +40,17 @@ class TipoEquipamento {
         $this->img = $img;
     }
 
+    public static function getById( $id )
+    {
+        require_once("lib/ConexaoBD.php");
+        $sql = 'SELECT nome, descricao, img FROM sala WHERE id = ?';
+        $conn = ConexaoBD::getConnection();
+        $statement = $conn->prepare($sql);
+        $statement->execute(array($id));
+        $ret = $statement->fetchObject();
+        return new TipoEquipamento($id,$ret->nome,$ret->descricao,$ret->img);
+    }
+
     /**
      * @return int
      */
@@ -108,7 +119,7 @@ class TipoEquipamento {
      * @return TipoEquipamento[]
      */
     public static function getAll() {
-        require_once ("lib/ConexaoBD.php");
+        require_once("lib/ConexaoBD.php");
         $sql = 'SELECT * FROM tipoeqpt';
         $conn = ConexaoBD::getConnection();
         $statement = $conn->prepare($sql);
@@ -122,24 +133,24 @@ class TipoEquipamento {
     }
 
     /**
-     * @return static json
+     * @return string json
      */
     public function asJSON() {
         $json = '{ "id": "' . $this->id . '",';
         $json .= '"nome": "' . $this->nome . '",';
         $json .= '"descricao": "' . $this->descricao . '",';
-        $json .= '"descricao": "' . $this->getImagePath() . '"}';
+        $json .= '"img": "' . $this->getImagePath() . '"}';
         return $json;
     }
 
     public function getImagePath() {
-        require_once ('ConfigClass.php');
+        require_once('ConfigClass.php');
         $ret = ConfigClass::diretorioImagens . '/' . $this->img;
         return $ret;
     }
 
     public function save() {
-        require_once ("lib/ConexaoBD.php");
+        require_once("lib/ConexaoBD.php");
         $conn = ConexaoBD::getConnection();
         if ($conn->inTransaction()) {
             return false;

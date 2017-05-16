@@ -35,56 +35,57 @@ if (sizeof($_POST) > 0) {
 </head>
 <body>
 <? include 'header.php'; ?>
-
-<form id="form-sala" method="post" action="">
-    <div class="row">
-        <div class="col-xs-12 col-md-offset-1 col-md-10">
-            <div class="form-group">
-                <label for="predio">Prédio</label>
-                <div class="input-group">
-                    <select class="form-control" name="predio" id="predio">
-                        <option value="">SELECIONAR</option>
-                        <?
-                        require_once ("Predio.php");
-                        $predios = Predio::getAll();
-                        foreach ($predios as $predio) {
-                            ?><option value ="<?=$predio->getId()?>"><?=$predio->getNome()?> [<?=$predio->getDescricao()?>]</option><?
-                        }
-                        ?>
-                    </select>
-                    <span id="span-add-predio" class="input-group-addon" data-toggle="modal" data-target="#modal-add-predio" ><i class="fa fa-plus"></i></span>
+<div class="container-fluid">
+    <form id="form-sala" method="post" action="">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <label for="predio">Prédio</label>
+                    <div class="input-group">
+                        <select class="form-control" name="predio" id="predio">
+                            <option value="">SELECIONAR</option>
+                            <?
+                            require_once("dao/Predio.php");
+                            $predios = Predio::getAll();
+                            foreach ($predios as $predio) {
+                                ?><option value ="<?=$predio->getId()?>"><?=$predio->getNome()?> [<?=$predio->getDescricao()?>]</option><?
+                            }
+                            ?>
+                        </select>
+                        <span id="span-add-predio" class="input-group-addon" data-toggle="modal" data-target="#modal-add-predio" ><i class="fa fa-plus"></i></span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row hidden" id="row-salas">
-        <div class="col-xs-12 col-md-offset-1 col-md-10">
-            <div class="form-group">
-                <label for="sala">Sala</label>
-                <div class="input-group">
-                    <select class="form-control" name="sala" id="sala"></select>
-                    <span id="span-add-sala" class="span-add input-group-addon" data-toggle="modal" data-target="#modal-add-sala"><i class="fa fa-plus"></i></span>
+        <div class="row hidden" id="row-salas">
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <label for="sala">Sala</label>
+                    <div class="input-group">
+                        <select class="form-control" name="sala" id="sala"></select>
+                        <span id="span-add-sala" class="span-add input-group-addon" data-toggle="modal" data-target="#modal-add-sala"><i class="fa fa-plus"></i></span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row hidden" id="row-containers">
-        <div class="col-xs-12 col-md-offset-1 col-md-10">
-            <div class="form-group">
-                <label for="container">Container</label>
-                <div class="input-group">
-                    <select class="form-control" name="container" id="container"></select>
-                    <span id="span-add-container" class="span-add input-group-addon" data-toggle="modal" data-target="#modal-add-container"><i class="fa fa-plus"></i></span>
+        <div class="row hidden" id="row-containers">
+            <div class="col-xs-12">
+                <div class="form-group">
+                    <label for="container">Container</label>
+                    <div class="input-group">
+                        <select class="form-control" name="container" id="container"></select>
+                        <span id="span-add-container" class="span-add input-group-addon" data-toggle="modal" data-target="#modal-add-container"><i class="fa fa-plus"></i></span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="row hidden" id="row-submit">
-        <div class="col-xs-12 col-md-offset-1 col-md-10">
-            <button type="submit" class="btn btn-success btn-block">Selecionar</button>
+        <div class="row hidden" id="row-submit">
+            <div class="col-xs-12">
+                <button type="submit" class="btn btn-info btn-block">Selecionar</button>
+            </div>
         </div>
-    </div>
-</form>
+    </form>
+</div>
 
 
 <div id="modal-add-predio" class="modal-add modal fade" role="dialog">

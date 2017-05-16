@@ -37,7 +37,7 @@ class Sala {
      */
     public function __construct($id, $predio, $nro, $descricao) {
         $this->id = $id;
-        require_once ('Predio.php');
+        require_once('Predio.php');
         $this->predio = is_object($predio) ? $predio : Predio::getById($predio);
         $this->nro = $nro;
         $this->descricao = $descricao;
@@ -45,7 +45,7 @@ class Sala {
 
     public static function getById($id)
     {
-        require_once ("lib/ConexaoBD.php");
+        require_once("lib/ConexaoBD.php");
         $sql = 'SELECT id_predio, nro, descricao FROM sala WHERE id = ?';
         $conn = ConexaoBD::getConnection();
         $statement = $conn->prepare($sql);
@@ -123,7 +123,7 @@ class Sala {
      * @return Sala[] todas as salas
      */
     public static function getAll() {
-        require_once ("lib/ConexaoBD.php");
+        require_once("lib/ConexaoBD.php");
         $sql = 'SELECT * FROM sala';
         $conn = ConexaoBD::getConnection();
         $statement = $conn->prepare($sql);
@@ -140,8 +140,8 @@ class Sala {
      * @return Container[]
      */
     public function getContainers() {
-        require_once ("lib/ConexaoBD.php");
-        require_once ("Container.php");
+        require_once("lib/ConexaoBD.php");
+        require_once("Container.php");
         $sql = 'SELECT * FROM container WHERE id_sala = ?';
         $conn = ConexaoBD::getConnection();
         $statement = $conn->prepare($sql);
@@ -155,7 +155,7 @@ class Sala {
     }
 
     public function asJSON() {
-        require_once ('Predio.php');
+        require_once('Predio.php');
         //$id, $predio, $nro, $descricao
         $json = '{ "id": "' . $this->id . '",';
         $json .= '"predio": ' . $this->predio->asJSON() . ',';
@@ -166,8 +166,8 @@ class Sala {
     }
 
     public function save() {
-        require_once ("lib/ConexaoBD.php");
-        require_once ("Predio.php");
+        require_once("lib/ConexaoBD.php");
+        require_once("Predio.php");
         $conn = ConexaoBD::getConnection();
         if ($conn->inTransaction()) {
             return false;

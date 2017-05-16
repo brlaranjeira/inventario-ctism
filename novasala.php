@@ -9,7 +9,7 @@
 $predio = $_POST['predio'];
 $nro = $_POST['nro'];
 $descricao = $_POST['descricao'];
-require_once ('Sala.php');
+require_once('dao/Sala.php');
 $sala = new Sala(null,$predio,$nro,$descricao);
 if (!$sala->save()) {
     header('HTTP/1.1 500 Erro Interno.');
