@@ -8,7 +8,7 @@
 
 $nome = $_POST['nome'];
 $descricao = $_POST['descricao'];
-require_once("dao/Predio.php");
+require_once(__DIR__ . "/../dao/Predio.php");
 $predio = new Predio(null,$nome,$descricao);
 if (!$predio->save()) {
     header('HTTP/1.1 500 Erro Interno.');

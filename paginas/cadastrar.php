@@ -5,28 +5,27 @@
  * Date: 5/11/17
  * Time: 3:16 PM
  */
-error_reporting(E_ALL);
-require_once ('lib/Usuario.php');
-require_once ('lib/Paginas.php');
-require_once('dao/Predio.php');
-require_once('dao/Sala.php');
-require_once('dao/Container.php');
+require_once(__DIR__.'/../lib/Usuario.php');
+require_once(__DIR__.'/../lib/Paginas.php');
+require_once(__DIR__.'/../dao/Predio.php');
+require_once(__DIR__.'/../dao/Sala.php');
+require_once(__DIR__.'/../dao/Container.php');
 Paginas::forcaSeguranca();
 
 ?>
 <html>
 <head>
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome/font-awesome.min.css">
-    <link rel="stylesheet" href="css/jquery/jquery-ui.min.css">
-    <link rel="stylesheet" href="css/inventario.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/cadastrar.css">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/inventario.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/cadastrar.css">
     <title><?=ConfigClass::sysName?></title>
 </head>
 <body>
 <?
-include 'header.php';
+include __DIR__ . '/fragments/header.php';
 
 session_start();
 if (!isset($_SESSION['ctism_inventario_sala'])) {
@@ -59,7 +58,7 @@ $resp = new Usuario($_SESSION['ctism_inventario_responsavel']);
                     }
                     ?>
                 </span>
-                <a href="sel_sala.php" class="input-group-addon"><i class="fa fa-exchange"></i></a>
+                <a href="./sel_sala.php" class="input-group-addon"><i class="fa fa-exchange"></i></a>
             </div>
         </div>
     </div>
@@ -71,13 +70,13 @@ $resp = new Usuario($_SESSION['ctism_inventario_responsavel']);
                 <span  class="form-control">
                     <?=$resp->getFullName()?>
                 </span>
-                <a href="sel_resp.php" class="input-group-addon"><i class="fa fa-exchange"></i></a>
+                <a href="./sel_resp.php" class="input-group-addon"><i class="fa fa-exchange"></i></a>
             </div>
         </div>
     </div>
 </div>
 
-<form id="form-cadastro-equipamento" method="post" enctype="multipart/form-data" action="novoequipamento.php">
+<form id="form-cadastro-equipamento" method="post" enctype="multipart/form-data">
     <input type="hidden" name="sala" value="<?=$sala->getId()?>">
     <? if (isset($container)) { ?>
         <input type="hidden" name="container" value="<?=$container->getId()?>">
@@ -113,7 +112,7 @@ $resp = new Usuario($_SESSION['ctism_inventario_responsavel']);
             <label for="estado">Estado</label>
             <select name="estado" id="estado" class="form-control">
                 <?
-                require_once('dao/EstadoEquipamento.php');
+                require_once(__DIR__.'/../dao/EstadoEquipamento.php');
                 $estados = EstadoEquipamento::getAll();
                 foreach ($estados as $estado) {
                     ?><option value="<?=$estado->getId()?>"><?=$estado->getDescricao()?></option><?
@@ -185,12 +184,12 @@ $resp = new Usuario($_SESSION['ctism_inventario_responsavel']);
     </div>
 </div>
 
-<? include 'footer.php'; ?>
+<? include __DIR__ . '/fragments/footer.php'; ?>
 </body>
-<script type="application/javascript" language="javascript" src="js/jquery/jquery-2.2.1.min.js"></script>
-<script type="application/javascript" language="javascript" src="js/jquery/jquery-ui.min.js"></script>
-<script type="application/javascript" language="javascript" src="js/jquery/jquery.mask.min.js"></script>
-<script type="application/javascript" language="javascript" src="js/bootstrap/bootstrap.min.js"></script>
-<script type="application/javascript" language="javascript" src="js/inventario.js"></script>
-<script type="application/javascript" language="javascript" src="js/cadastrar.js"></script>
+<script type="application/javascript" language="javascript" src="../js/jquery/jquery-2.2.1.min.js"></script>
+<script type="application/javascript" language="javascript" src="../js/jquery/jquery-ui.min.js"></script>
+<script type="application/javascript" language="javascript" src="../js/jquery/jquery.mask.min.js"></script>
+<script type="application/javascript" language="javascript" src="../js/bootstrap/bootstrap.min.js"></script>
+<script type="application/javascript" language="javascript" src="../js/inventario.js"></script>
+<script type="application/javascript" language="javascript" src="../js/cadastrar.js"></script>
 </html>

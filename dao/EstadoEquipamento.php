@@ -47,7 +47,7 @@ class EstadoEquipamento {
      * @return EstadoEquipamento[]
      */
     public static function getAll() {
-        require_once("lib/ConexaoBD.php");
+        require_once(__DIR__."/../lib/ConexaoBD.php");
         $sql = 'SELECT * FROM estadoeqpt';
         $conn = ConexaoBD::getConnection();
         $statement = $conn->prepare($sql);
@@ -66,13 +66,19 @@ class EstadoEquipamento {
      * @return EstadoEquipamento
      */
     public static function getById( $id ) {
-        require_once ("lib/ConexaoBD.php");
+        require_once (__DIR__."/../lib/ConexaoBD.php");
         $sql = 'SELECT descricao FROM estadoeqpt WHERE id = ?';
         $conn = ConexaoBD::getConnection();
         $statement = $conn->prepare($sql);
         $statement->execute(array($id));
         $ret = $statement->fetchObject();
         return new EstadoEquipamento($id,$ret->descricao);
+    }
+
+    public function asJSON() {
+        $json = '{ "id": "' . $this->id . '",';
+        $json .= '"descricao": "' . $this->descricao . '"}';
+        return $json;
     }
 
 

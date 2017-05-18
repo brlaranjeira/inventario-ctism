@@ -22,7 +22,7 @@ class ConexaoBD {
      */
     public static function getConnection() {
         try {
-            require_once ("ConfigClass.php");
+            require_once (__DIR__.'/../ConfigClass.php');
             return new PDO ('mysql:host=' . ConfigClass::dbHost . ';dbname=' . ConfigClass::dbName . ';charset=' . ConfigClass::mysqlCharset , ConfigClass::dbUser, ConfigClass::dbPasswd);
         } catch ( Exception $e ) {
             die($e->getMessage());

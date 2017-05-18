@@ -6,9 +6,9 @@
  * Time: 3:07 PM
  */
 
-require_once ('lib/LDAP/ldap.php');
-require_once ('lib/Usuario.php');
-require_once ('lib/Grupos.php');
+require_once (__DIR__.'/lib/LDAP/ldap.php');
+require_once (__DIR__.'/lib/Usuario.php');
+require_once (__DIR__.'/lib/Grupos.php');
 $msg = '';
 if (!empty($_POST)) {
     $ldap = new ldap();
@@ -64,5 +64,5 @@ if (!empty($_POST)) {
         </form>
     </div>
     </body>
-    <? include 'footer.php'; ?>
+    <? include __DIR__ . '/paginas/fragments/footer.php'; ?>
     </html>

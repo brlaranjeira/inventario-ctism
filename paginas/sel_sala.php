@@ -6,8 +6,8 @@
  * Time: 3:16 PM
  */
 
-require_once ('lib/Usuario.php');
-require_once ('lib/Paginas.php');
+require_once(__DIR__ . '/../lib/Usuario.php');
+require_once(__DIR__ . '/../lib/Paginas.php');
 Paginas::forcaSeguranca();
 ?>
 <?
@@ -26,15 +26,15 @@ if (sizeof($_POST) > 0) {
 ?>
 <html>
 <head>
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome/font-awesome.min.css">
-    <link rel="stylesheet" href="css/inventario.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/sel_sala.css">
+    <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/font-awesome/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/inventario.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/sel_sala.css">
     <title><?=ConfigClass::sysName?></title>
 </head>
 <body>
-<? include 'header.php'; ?>
+<? include __DIR__ . '/fragments/header.php'; ?>
 <div class="container-fluid">
     <form id="form-sala" method="post" action="">
         <div class="row">
@@ -45,14 +45,14 @@ if (sizeof($_POST) > 0) {
                         <select class="form-control" name="predio" id="predio">
                             <option value="">SELECIONAR</option>
                             <?
-                            require_once("dao/Predio.php");
+                            require_once(__DIR__ . "/../dao/Predio.php");
                             $predios = Predio::getAll();
                             foreach ($predios as $predio) {
                                 ?><option value ="<?=$predio->getId()?>"><?=$predio->getNome()?> [<?=$predio->getDescricao()?>]</option><?
                             }
                             ?>
                         </select>
-                        <span id="span-add-predio" class="input-group-addon" data-toggle="modal" data-target="#modal-add-predio" ><i class="fa fa-plus"></i></span>
+                        <span id="span-add-predio" class="span-add input-group-addon" data-toggle="modal" data-target="#modal-add-predio" ><i class="fa fa-plus"></i></span>
                     </div>
                 </div>
             </div>
@@ -189,11 +189,11 @@ if (sizeof($_POST) > 0) {
 </div>
 
 
-<? include 'footer.php'; ?>
+<? include __DIR__ . '/../paginas/fragments/footer.php'; ?>
 </body>
-<script type="application/javascript" language="javascript" src="js/jquery/jquery-2.2.1.min.js"></script>
-<script type="application/javascript" language="javascript" src="js/jquery/jquery.mask.min.js"></script>
-<script type="application/javascript" language="javascript" src="js/bootstrap/bootstrap.min.js"></script>
-<script type="application/javascript" language="javascript" src="js/inventario.js"></script>
-<script type="application/javascript" language="javascript" src="js/sel_sala.js"></script>
+<script type="application/javascript" language="javascript" src="../js/jquery/jquery-2.2.1.min.js"></script>
+<script type="application/javascript" language="javascript" src="../js/jquery/jquery.mask.min.js"></script>
+<script type="application/javascript" language="javascript" src="../js/bootstrap/bootstrap.min.js"></script>
+<script type="application/javascript" language="javascript" src="../js/inventario.js"></script>
+<script type="application/javascript" language="javascript" src="../js/sel_sala.js"></script>
 </html>

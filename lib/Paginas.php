@@ -10,7 +10,7 @@ class Paginas {
 
     static function forcaSeguranca() {
         session_start();
-        require_once ("Usuario.php");
+        require_once (__DIR__."/Usuario.php");
         $usuario = Usuario::unserialize($_SESSION['ctism_user']);
         if ( !self::checkPermissao($usuario, basename($_SERVER["SCRIPT_FILENAME"], '.php')) ) {
             http_response_code(403);
@@ -27,7 +27,7 @@ class Paginas {
      * @return boolean se a pagina eh permitida ou nao
      */
     static function checkPermissao($usuario,$pagina) {
-        require_once ("ConexaoBD.php");
+        require_once (__DIR__."/ConexaoBD.php");
         $gidArray = $usuario->getGrupos();
         $sql = 'SELECT COUNT(*) AS cnt FROM permissao WHERE id_pagina=? AND (id_grupo = \'*\' OR id_grupo IN (' . str_repeat ('?, ',  count ($gidArray) - 1) . '?))';
         $statement = ConexaoBD::getConnection()->prepare($sql);
@@ -45,7 +45,7 @@ class Paginas {
      * @return array paginas permitidas
      */
     static function getAllowedPages($usuario) {
-        require_once ("ConexaoBD.php");
+        require_once (__DIR__."/ConexaoBD.php");
         $gidArray = $usuario->getGrupos();
         $ret = array();
         try {

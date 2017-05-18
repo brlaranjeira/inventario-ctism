@@ -6,9 +6,9 @@
  * Time: 6:50 PM
  */
 
-require_once ('lib/Usuario.php');
-require_once ('lib/Paginas.php');
-require_once("dao/Sala.php");
+require_once(__DIR__ . '/../lib/Usuario.php');
+require_once(__DIR__ . '/../lib/Paginas.php');
+require_once(__DIR__ . "/../dao/Sala.php");
 Paginas::forcaSeguranca();
 
 $idSala = $_REQUEST['idsala'];

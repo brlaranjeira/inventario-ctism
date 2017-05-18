@@ -9,7 +9,7 @@ $('#form-sala').on('change', '#predio', function() {
         $('#sala').empty();
         $('#row-salas').addClass('hidden');
     } else {
-        $.ajax('getsalas.php', {
+        $.ajax('../ajax/getsalas.php', {
             data: {idpredio: idPredio},
             success: function ( response ) {
                 var salas = JSON.parse(response);
@@ -35,7 +35,7 @@ $('#form-sala').on('change', '#sala', function() {
     if ( idSala.length == 0 ) {
 
     } else {
-        $.ajax('getcontainers.php', {
+        $.ajax('../ajax/getcontainers.php', {
             data: {idsala: idSala},
             success: function ( response ) {
                 var containers = JSON.parse(response);
@@ -60,7 +60,7 @@ $('.modal-add').on('show.bs.modal', function () {
 });
 
 $('#btn-novo-predio').click(function () {
-   $.ajax('novopredio.php', {
+   $.ajax('../ajax/novopredio.php', {
        method: 'post',
        data: {
            nome: document.getElementById('predio-nome').value,
@@ -82,7 +82,7 @@ $('#btn-novo-predio').click(function () {
 });
 
 $('#btn-nova-sala').click(function () {
-    $.ajax('novasala.php', {
+    $.ajax('../ajax/novasala.php', {
         method:'post',
         data: {
             predio: document.getElementById('predio').value,
@@ -105,7 +105,7 @@ $('#btn-nova-sala').click(function () {
 });
 
 $('#btn-novo-container').click(function () {
-    $.ajax('novocontainer.php', {
+    $.ajax('../ajax/novocontainer.php', {
         method:'post',
         data: {
             sala: document.getElementById('sala').value,

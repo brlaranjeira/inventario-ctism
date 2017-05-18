@@ -6,9 +6,9 @@
  * Time: 4:00 PM
  */
 
-require_once ('lib/Usuario.php');
-require_once ('lib/Paginas.php');
-require_once("dao/TipoEquipamento.php");
+require_once(__DIR__ . '/../lib/Usuario.php');
+require_once(__DIR__ . '/../lib/Paginas.php');
+require_once(__DIR__ . '/../dao/TipoEquipamento.php');
 Paginas::forcaSeguranca();
 
 $tipos = TipoEquipamento::getAll();

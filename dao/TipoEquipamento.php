@@ -42,7 +42,7 @@ class TipoEquipamento {
 
     public static function getById( $id )
     {
-        require_once("lib/ConexaoBD.php");
+        require_once(__DIR__."/../lib/ConexaoBD.php");
         $sql = 'SELECT nome, descricao, img FROM sala WHERE id = ?';
         $conn = ConexaoBD::getConnection();
         $statement = $conn->prepare($sql);
@@ -119,7 +119,7 @@ class TipoEquipamento {
      * @return TipoEquipamento[]
      */
     public static function getAll() {
-        require_once("lib/ConexaoBD.php");
+        require_once(__DIR__."/../lib/ConexaoBD.php");
         $sql = 'SELECT * FROM tipoeqpt';
         $conn = ConexaoBD::getConnection();
         $statement = $conn->prepare($sql);
@@ -144,13 +144,13 @@ class TipoEquipamento {
     }
 
     public function getImagePath() {
-        require_once('ConfigClass.php');
+        require_once(__DIR__.'/../ConfigClass.php');
         $ret = ConfigClass::diretorioImagens . '/' . $this->img;
         return $ret;
     }
 
     public function save() {
-        require_once("lib/ConexaoBD.php");
+        require_once(__DIR__."/../lib/ConexaoBD.php");
         $conn = ConexaoBD::getConnection();
         if ($conn->inTransaction()) {
             return false;

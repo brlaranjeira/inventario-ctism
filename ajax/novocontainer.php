@@ -10,7 +10,7 @@ $sala = $_REQUEST['sala'];
 $nro = $_REQUEST['nro'];
 $descricao = $_REQUEST['descricao'];
 
-require_once('dao/Container.php');
+require_once(__DIR__ . '/../dao/Container.php');
 $container = new Container(null,$sala,$nro,$descricao);
 if ($container->save()) {
     echo $container->asJSON();

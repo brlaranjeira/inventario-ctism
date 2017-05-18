@@ -1,9 +1,7 @@
 /**
  * Created by brlaranjeira on 5/15/17.
  */
-
-debugger;
-$.ajax('gettipos.php', {
+$.ajax('../ajax/gettipos.php', {
     method: 'get',
     dataType: 'json',
     success: function ( response ) {
@@ -35,7 +33,7 @@ $.ajax('gettipos.php', {
             $esqR2.append('<div class="col-xs-12"><small>' + item.desc + '</small></div>');
 
             var $img = $('<img class="img-responsive" width="100 px" height="100 px" />');
-            $img.attr('src',item.imgpath);
+            $img.attr('src','../'+item.imgpath);
             $dir.append($img);
 
             $row.append($esq);
@@ -54,17 +52,15 @@ $.ajax('gettipos.php', {
             });
             $( ul ).find( "li:odd" ).addClass( "li-row-odd" );
         }
-    }
-    , error: function ( response ) {
+    } , error: function ( response ) {
         debugger;
     }
 });
 
 
 $('#btn-novo-tipoeqpt').click( function () {
-    debugger;
     var formData = new FormData(document.getElementById('form-novo-tipoeqpt'));
-    $.ajax('novotipoeqpt.php', {
+    $.ajax('../ajax/novotipoeqpt.php', {
         method:'post',
         data: formData,
         processData: false,
@@ -93,6 +89,7 @@ $('#btn-novo-tipoeqpt').click( function () {
 } );
 
 $('#btn-novoeqpt').click(function () {
+    debugger;
     var copia = document.getElementById('tipoeqpt-cpy').value;
     var atual = document.getElementById('tipoeqpt').value;
     if (copia !== atual) {
@@ -101,6 +98,27 @@ $('#btn-novoeqpt').click(function () {
         document.getElementById('tipoeqpt-img').value = '';
         $('#modal-add-tipoeqpt').modal('show');
     } else {
-        $('#form-cadastro-equipamento').submit();
+        var url = $('#form-cadastro-equipamento').attr('action');
+        var formData = new FormData(document.getElementById('form-cadastro-equipamento'));
+        $.ajax('../ajax/novoequipamento.php', {
+            method: 'post',
+            data: formData,
+            processData: false,
+            contentType: false,
+            dataType: 'json',
+            success: function ( response )  {
+                showAlert('success','Pronto!','O equipamento foi cadastrado.');
+                document.getElementById('descricao').value = '';
+                document.getElementById('patrimonio').value = '';
+                document.getElementById('numserie').value = '';
+                document.getElementById('estado').value = document.getElementById('estado')[0].value
+                document.getElementById('observacao').value = '';
+                document.getElementById('foto').value = '';
+            }, error: function ( response ) {
+                debugger;
+            }
+        });
+        //$('#form-cadastro-equipamento').submit();
+
     }
 });

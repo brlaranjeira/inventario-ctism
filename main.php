@@ -6,9 +6,10 @@
  * Time: 11:42 AM
  */
 
-require_once ("lib/Usuario.php");
-require_once ("lib/Paginas.php");
-require_once ("ConfigClass.php");
+$a = __DIR__."lib/Usuario.php";
+require_once (__DIR__."/lib/Usuario.php");
+require_once (__DIR__."/lib/Paginas.php");
+require_once (__DIR__."/ConfigClass.php");
 $usuario = Usuario::restoreFromSession();
 if ($usuario == null) {
     header('Location: login.php');
@@ -21,19 +22,19 @@ if ($usuario == null) {
     <title><?=ConfigClass::sysName?></title>
 </head>
 <body>
-    <? include 'header.php'; ?>
+    <? include __DIR__ . '/paginas/fragments/header.php'; ?>
     <div class="container-fluid">
         <div class="row">
         <?
             $paginas = Paginas::getAllowedPages($usuario);
             foreach ($paginas as $pagina) { ?>
                 <div class="col-xs-12 text-center">
-                    <a class="" href="<?=$pagina['id']?>.php"><?=$pagina['nome']?></a>
+                    <a class="" href="paginas/<?=$pagina['id']?>.php"><?=$pagina['nome']?></a>
                 </div>
             <? } ?>
         </div>
     </div>
-    <? include 'footer.php';?>
+    <? include __DIR__ . '/paginas/fragments/footer.php'; ?>
 </body>
 </html>
 

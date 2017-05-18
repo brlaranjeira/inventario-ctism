@@ -49,7 +49,7 @@ class Usuario implements Serializable {
      */
     public function loadGrupos() {
         $this->grupos = array();
-        require_once("LDAP/ldap.php");
+        require_once(__DIR__."/LDAP/ldap.php");
         $ldap = new ldap();
         $allGroups = $ldap->getXbyY('gidNumber', 'cn', '*', LDAP_GROUPS_BASE);
         foreach ($allGroups as $gid) {
@@ -63,7 +63,7 @@ class Usuario implements Serializable {
      *
      */
     public function loadUidNumber() {
-        require_once("LDAP/ldap.php");
+        require_once(__DIR__."/LDAP/ldap.php");
         $ldap = new ldap();
         $this->uidNumber = $ldap->getXbyY('uidnumber','uid',$this->uid);
     }
@@ -72,7 +72,7 @@ class Usuario implements Serializable {
      *
      */
     public function loadFullName() {
-        require_once("LDAP/ldap.php");
+        require_once(__DIR__."/LDAP/ldap.php");
         $ldap = new ldap();
         $this->fullName = $ldap->getXbyY('cn','uid',$this->uid);
     }
@@ -84,7 +84,7 @@ class Usuario implements Serializable {
      * @return Usuario[]
      */
     public static function getAllFromGroup($gid) {
-        require_once ("LDAP/ldap.php");
+        require_once (__DIR__."/LDAP/ldap.php");
         $ldap = new ldap();
         $ret = array();
         $gid = is_array($gid) ? $gid : array($gid);

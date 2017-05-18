@@ -6,9 +6,9 @@
  * Time: 5:20 PM
  */
 
-require_once ('lib/Usuario.php');
-require_once ('lib/Paginas.php');
-require_once("dao/Predio.php");
+require_once(__DIR__ . '/../lib/Usuario.php');
+require_once(__DIR__ . '/../lib/Paginas.php');
+require_once(__DIR__ . "/../dao/Predio.php");
 Paginas::forcaSeguranca();
 $idPredio = $_REQUEST['idpredio'];
 $predio = Predio::getById($idPredio);
