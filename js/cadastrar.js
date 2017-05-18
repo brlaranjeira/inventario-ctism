@@ -11,6 +11,7 @@ $.ajax('../ajax/gettipos.php', {
                 document.getElementById('tipoeqpt').value = ui.item.label;
                 document.getElementById('tipoeqpt-cpy').value = ui.item.label;
                 document.getElementById('idtipoeqpt').value = ui.item.id;
+                $('#descricao').focus();
                 return false;
             }
         });
@@ -56,6 +57,16 @@ $.ajax('../ajax/gettipos.php', {
         debugger;
     }
 });
+
+
+function conferePatrimonio () {
+    var valor = document.getElementById('patrimonio').value;
+    if (valor.length >= 6) {
+        debugger;
+    }
+}
+$('#patrimonio').change(conferePatrimonio);
+$('#patrimonio').keyup(conferePatrimonio);
 
 
 $('#btn-novo-tipoeqpt').click( function () {

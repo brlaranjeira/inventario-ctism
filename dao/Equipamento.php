@@ -76,7 +76,11 @@ class Equipamento {
         require_once (__DIR__.'/EstadoEquipamento.php');
         $this->id = $id;
         $this->sala = is_object($sala) ? $sala : Sala::getById($sala);
-        $this->container = !isset($container) ? null : is_object($container) ? $container : Container::getById($container);
+        if (!isset($container)) {
+            $this->container = null;
+        } else {
+            $this->container = is_object($container) ? $container : Container::getById($container);
+        }
         $this->responsavel = is_object($responsavel) ? $responsavel : new Usuario($responsavel);
         $this->tipo = is_object($tipo) ? $tipo : TipoEquipamento::getById($tipo);
         $this->descricao = $descricao;
@@ -210,6 +214,167 @@ class Equipamento {
         $json .= '"foto": "' . $this->getImagePath() . '"}';
         return $json;
     }
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId( $id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return Sala
+     */
+    public function getSala()
+    {
+        return $this->sala;
+    }
+
+    /**
+     * @param Sala $sala
+     */
+    public function setSala( $sala)
+    {
+        $this->sala = $sala;
+    }
+
+    /**
+     * @return Container|null
+     */
+    public function getContainer() {
+        return $this->container;
+    }
+
+    /**
+     * @param Container $container
+     */
+    public function setContainer( $container)
+    {
+        $this->container = $container;
+    }
+
+    /**
+     * @return Usuario
+     */
+    public function getResponsavel()
+    {
+        return $this->responsavel;
+    }
+
+    /**
+     * @param Usuario $responsavel
+     */
+    public function setResponsavel( $responsavel)
+    {
+        $this->responsavel = $responsavel;
+    }
+
+    /**
+     * @return TipoEquipamento
+     */
+    public function getTipo()
+    {
+        return $this->tipo;
+    }
+
+    /**
+     * @param TipoEquipamento $tipo
+     */
+    public function setTipo($tipo)
+    {
+        $this->tipo = $tipo;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescricao()
+    {
+        return $this->descricao;
+    }
+
+    /**
+     * @param string $descricao
+     */
+    public function setDescricao( $descricao)
+    {
+        $this->descricao = $descricao;
+    }
+
+    /**
+     * @return string
+     */
+    public function getPatrimonio()
+    {
+        return $this->patrimonio;
+    }
+
+    /**
+     * @param string $patrimonio
+     */
+    public function setPatrimonio($patrimonio)
+    {
+        $this->patrimonio = $patrimonio;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNumserie()
+    {
+        return $this->numserie;
+    }
+
+    /**
+     * @param string $numserie
+     */
+    public function setNumserie($numserie)
+    {
+        $this->numserie = $numserie;
+    }
+
+    /**
+     * @return EstadoEquipamento
+     */
+    public function getEstado()
+    {
+        return $this->estado;
+    }
+
+    /**
+     * @param EstadoEquipamento $estado
+     */
+    public function setEstado( $estado)
+    {
+        $this->estado = $estado;
+    }
+
+    /**
+     * @return string
+     */
+    public function getObs()
+    {
+        return $this->obs;
+    }
+
+    /**
+     * @param string $obs
+     */
+    public function setObs( $obs)
+    {
+        $this->obs = $obs;
+    }
+
+
 
 
 

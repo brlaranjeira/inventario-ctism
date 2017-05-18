@@ -29,10 +29,42 @@ Paginas::forcaSeguranca();
 <?
 include __DIR__ . '/fragments/header.php';
 
-$todos = Equipamento::getAll();
-
-
+$equipamentos = Equipamento::getAll();
+if (sizeof($equipamentos) <= 0) {
+    echo 'Nenhum equipamento cadastrado';
+    die();
+}
 ?>
+<table class="table table-striped table-hover">
+    <thead><tr>
+        <th>Patrimônio</th>
+        <th>Responsável</th>
+        <th>Tipo de Equipamento</th>
+        <th>Prédio/Sala/Contêiner</th>
+        <th>Descrição</th>
+        <th>Estado</th>
+    </tr></thead>
+    <tbody>
+    <?
+    foreach ($equipamentos as $equipamento) {
+        ?> <tr>
+            <td><?=$equipamento->getPatrimonio()?></td>
+            <td><?=$equipamento->getResponsavel()->getFullName()?></td>
+            <td><?=$equipamento->getTipo()->getDescricao()?></td>
+            <td><?
+                echo 'Prédio ' . $equipamento->getSala()->getPredio()->getNome();
+                echo ', Sala' . $equipamento->getSala()->getNro();
+                $con = $equipamento->getContainer();
+                if ($equipamento->getContainer() !== null ) {
+                    echo ', Contêiner ' . $equipamento->getContainer()->getCod();
+                }
+            ?></td>
+            <td><?=$equipamento->getDescricao()?></td>
+            <td><?=$equipamento->getEstado()->getDescricao()?></td>
+        </tr> <?
+    }
+    ?>
+    </tbody>
 
 
 

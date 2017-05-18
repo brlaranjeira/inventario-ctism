@@ -43,7 +43,7 @@ class TipoEquipamento {
     public static function getById( $id )
     {
         require_once(__DIR__."/../lib/ConexaoBD.php");
-        $sql = 'SELECT nome, descricao, img FROM sala WHERE id = ?';
+        $sql = 'SELECT nome, descricao, img FROM tipoeqpt WHERE id = ?';
         $conn = ConexaoBD::getConnection();
         $statement = $conn->prepare($sql);
         $statement->execute(array($id));
