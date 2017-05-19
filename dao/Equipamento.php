@@ -129,7 +129,7 @@ class Equipamento {
     public static function getById($id) {
         require_once(__DIR__."/../lib/ConexaoBD.php");
         $sql = 'SELECT id_sala, id_container, responsavel, id_tipoeqpt, descricao ';
-        $sql .= 'patrimonio, numserie, id_estadoeqpt, obs, foto, FROM container WHERE id = ?';
+        $sql .= 'patrimonio, numserie, id_estadoeqpt, obs, foto FROM equipamento WHERE id = ?';
         $conn = ConexaoBD::getConnection();
         $statement = $conn->prepare($sql);
         $statement->execute(array($id));
@@ -148,6 +148,33 @@ class Equipamento {
         );
     }
 
+    public static function getByParam($param, $valor) {
+
+        require_once(__DIR__."/../lib/ConexaoBD.php");
+        $sql = 'SELECT * FROM equipamento WHERE '. $param . ' = ? ';
+        $conn = ConexaoBD::getConnection();
+        $statement = $conn->prepare($sql);
+        $statement->execute(array($valor));
+        $ret = $statement->fetchObject();
+        if (!$ret) {
+            return null;
+        }
+        return new Equipamento(
+            $ret->id,
+            $ret->id_sala,
+            $ret->id_container,
+            $ret->responsavel,
+            $ret->id_tipoeqpt,
+            $ret->descricao,
+            $ret->patrimonio,
+            $ret->numserie,
+            $ret->id_estadoeqpt,
+            $ret->obs,
+            $ret->foto
+        );
+
+    }
+
     public function save() {
         require_once(__DIR__."/../lib/ConexaoBD.php");
         require_once(__DIR__."/Sala.php");
@@ -157,7 +184,7 @@ class Equipamento {
         }
         $conn->beginTransaction();
         if (isset($this->id)) { //update
-            //TODO: UPDATE
+            $a = 2;
         } else { //insert
             $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
             $sql = 'INSERT INTO equipamento (id_sala,id_container,responsavel,id_tipoeqpt,descricao,patrimonio,numserie,id_estadoeqpt,obs,foto)';
@@ -203,7 +230,7 @@ class Equipamento {
         //$id, $sala, $container, $responsavel, $tipo, $descricao, $patrimonio, $numserie, $estado, $obs, $foto
         $json = '{ "id": "' . $this->id . '",';
         $json .= '"sala": ' . $this->sala->asJSON() . ',';
-        $json .= '"container": ' . $this->container->asJSON() . ',';
+        $json .= '"container": ' . (isset($this->container) ? $this->container->asJSON() : '{}' ). ',';
         $json .= '"responsavel": ' . $this->responsavel . ',';
         $json .= '"tipo": ' . $this->tipo->asJSON() . ',';
         $json .= '"descricao": "' . $this->descricao . '",';

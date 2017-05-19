@@ -15,7 +15,7 @@ class Paginas {
         if ( !self::checkPermissao($usuario, basename($_SERVER["SCRIPT_FILENAME"], '.php')) ) {
             http_response_code(403);
             if ( basename($_SERVER['SCRIPT_NAME']) != 'getpage.php' ) {
-                header( 'Location: index.php' );
+                header( 'Location: ../index.php' );
             }
             die('Você não pode acessar esta página.');
         }

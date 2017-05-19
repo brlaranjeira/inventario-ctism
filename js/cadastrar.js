@@ -58,14 +58,50 @@ $.ajax('../ajax/gettipos.php', {
     }
 });
 
-
+var patrimonioDigitado;
 function conferePatrimonio () {
     var valor = document.getElementById('patrimonio').value;
-    if (valor.length >= 6) {
+    if (patrimonioDigitado != valor) {
+        patrimonioDigitado = valor;
         debugger;
+        $('#div-carregar-eqpt').length &&  $('#div-carregar-eqpt').remove();
+        $('#id-input').length &&  $('#id-input').remove();
+        $.ajax('../ajax/consultaequipamento.php', {
+            data: {patrimonio: valor},
+            success: function ( json ) {
+                debugger;
+                if (json.length > 0) {
+                    var response = JSON.parse( json );
+                    var $div = $('<div id="div-carregar-eqpt"/>');
+                    $div.text('Patrimônio já cadastrado (id='+response.id+')');
+                    var btn = $('<button type="button" id="label-carregar-eqpt" class="btn btn-primary btn-xs"/>');
+                    btn.attr('eqinfo',json);
+                    btn.click(function () {
+                       var equipamento = JSON.parse($(this).attr('eqinfo'));
+                       debugger;
+                       var $idInput = $('<input type="hidden" name="id" id="id-input"/>');
+                       $idInput.attr('value',response.id);
+                       $('#form-cadastro-equipamento').append($idInput);
+                       document.getElementById('tipoeqpt').value = equipamento.tipo.nome;
+                       document.getElementById('tipoeqpt-cpy').value = equipamento.tipo.nome;
+                       document.getElementById('idtipoeqpt').value = equipamento.tipo.id;
+                       document.getElementById('descricao').value = equipamento.descricao;
+                       document.getElementById('numserie').value = equipamento.numserie;
+                       document.getElementById('estado').value = equipamento.estado.id;
+                       document.getElementById('observacao').value = equipamento.obs;
+                       $('#div-carregar-eqpt').length &&  $('#div-carregar-eqpt').remove();
+                    });
+                    btn.text(' Carregar informações');
+                    $div.append(btn);
+                    $('#patrimonio').after($div);
+                }
+            }, error: function ( response ) {
+                debugger;
+            }
+        });
     }
 }
-$('#patrimonio').change(conferePatrimonio);
+//$('#patrimonio').change(conferePatrimonio);
 $('#patrimonio').keyup(conferePatrimonio);
 
 
@@ -109,7 +145,6 @@ $('#btn-novoeqpt').click(function () {
         document.getElementById('tipoeqpt-img').value = '';
         $('#modal-add-tipoeqpt').modal('show');
     } else {
-        var url = $('#form-cadastro-equipamento').attr('action');
         var formData = new FormData(document.getElementById('form-cadastro-equipamento'));
         $.ajax('../ajax/novoequipamento.php', {
             method: 'post',
@@ -122,7 +157,7 @@ $('#btn-novoeqpt').click(function () {
                 document.getElementById('descricao').value = '';
                 document.getElementById('patrimonio').value = '';
                 document.getElementById('numserie').value = '';
-                document.getElementById('estado').value = document.getElementById('estado')[0].value
+                //document.getElementById('estado').value = document.getElementById('estado')[0].value
                 document.getElementById('observacao').value = '';
                 document.getElementById('foto').value = '';
             }, error: function ( response ) {
