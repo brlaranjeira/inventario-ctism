@@ -184,7 +184,31 @@ class Equipamento {
         }
         $conn->beginTransaction();
         if (isset($this->id)) { //update
-            $a = 2;
+            $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
+            $sql = 'UPDATE equipamento SET id_sala = ?, id_container = ?, responsavel = ?,id_tipoeqpt = ?, descricao = ?,patrimonio = ?,numserie = ?,id_estadoeqpt = ?,obs = ?,foto = ? WHERE id = ?';
+            $statement = $conn->prepare($sql);
+            $execOk = $statement->execute(array(
+                $this->sala->getId(),
+                isset($this->container) ? $this->container->getId() : null,
+                $this->responsavel->getUid(),
+                $this->tipo->getId(),
+                $this->descricao,
+                $this->patrimonio,
+                $this->numserie,
+                $this->estado->getId(),
+                $this->obs,
+                $this->foto,
+                $this->id
+            ));
+            if (!$execOk) {
+                $conn->rollBack();
+                return false;
+            }
+            if ($conn->commit()) {
+                return $this->id;
+            }
+            $conn->rollBack();
+            return false;
         } else { //insert
             $conn->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING );
             $sql = 'INSERT INTO equipamento (id_sala,id_container,responsavel,id_tipoeqpt,descricao,patrimonio,numserie,id_estadoeqpt,obs,foto)';
@@ -271,7 +295,8 @@ class Equipamento {
      */
     public function setSala( $sala)
     {
-        $this->sala = $sala;
+        require_once (__DIR__.'/Sala.php');
+        $this->sala = is_object($sala) ? $sala : Sala::getById($sala);
     }
 
     /**
@@ -286,7 +311,8 @@ class Equipamento {
      */
     public function setContainer( $container)
     {
-        $this->container = $container;
+        require_once (__DIR__.'/Container.php');
+        $this->container = is_object($container) ? $container : Container::getById($container);
     }
 
     /**
@@ -302,7 +328,8 @@ class Equipamento {
      */
     public function setResponsavel( $responsavel)
     {
-        $this->responsavel = $responsavel;
+        require_once (__DIR__.'/../lib/Usuario.php');
+        $this->responsavel = is_object($responsavel) ? $responsavel : new Usuario($responsavel);
     }
 
     /**
@@ -318,7 +345,8 @@ class Equipamento {
      */
     public function setTipo($tipo)
     {
-        $this->tipo = $tipo;
+        require_once (__DIR__.'/TipoEquipamento.php');
+        $this->tipo = is_object($tipo) ? $tipo : TipoEquipamento::getById($tipo);
     }
 
     /**
@@ -382,7 +410,8 @@ class Equipamento {
      */
     public function setEstado( $estado)
     {
-        $this->estado = $estado;
+        require_once (__DIR__.'/EstadoEquipamento.php');
+        $this->estado = is_object($estado) ? $estado : EstadoEquipamento::getById($estado);
     }
 
     /**
@@ -401,6 +430,12 @@ class Equipamento {
         $this->obs = $obs;
     }
 
+    /**
+     * @param string $foto
+     */
+    public function setFoto( $foto ) {
+        $this->foto = $foto;
+    }
 
 
 

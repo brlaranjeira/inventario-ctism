@@ -38,8 +38,7 @@ class EstadoEquipamento {
     /**
      * @return string
      */
-    public function getDescricao()
-    {
+    public function getDescricao() {
         return $this->descricao;
     }
 
