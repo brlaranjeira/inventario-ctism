@@ -5,4 +5,5 @@
  * Date: 5/9/17
  * Time: 2:29 PM
  */
-header('Location: main.php');
+header('Location: ./paginas/main.php');
+

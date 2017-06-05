@@ -13,6 +13,7 @@ $('#form-sala').on('change', '#predio', function() {
             data: {idpredio: idPredio},
             success: function ( response ) {
                 var salas = JSON.parse(response);
+
                 $('#sala').empty();
                 $('#sala').append($('<option value="">SELECIONAR</option>'));
                 for (var i = 0; i < salas.length; i++) {

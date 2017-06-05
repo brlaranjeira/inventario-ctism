@@ -18,7 +18,7 @@ if (!empty($_POST)) {
         if ($grupoOk) {
             session_start();
             $usuario->saveToSession();
-            header('Location: main.php');
+            header('Location: ./paginas/main.php');
         } else {
             $msg = 'Usuário nao autorizado.';
         }

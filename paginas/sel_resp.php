@@ -32,7 +32,7 @@ if (sizeof($_POST) > 0) {
     <title><?=ConfigClass::sysName?></title>
 </head>
 <body>
-<? include __DIR__ . '/paginas/fragments/header.php'; ?>
+<? include __DIR__ . '/fragments/header.php'; ?>
     <div class="container-fluid">
         <form id="form-responsavel" method="post" action="">
             <div class="row">
