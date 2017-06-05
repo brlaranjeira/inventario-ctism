@@ -88,7 +88,7 @@ class Container
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId()
     {
         return $this->id;
     }
@@ -96,7 +96,7 @@ class Container
     /**
      * @param int $id
      */
-    public function setId(int $id)
+    public function setId($id)
     {
         $this->id = $id;
     }
@@ -104,7 +104,7 @@ class Container
     /**
      * @return Sala
      */
-    public function getSala(): Sala
+    public function getSala()
     {
         return $this->sala;
     }
@@ -112,7 +112,7 @@ class Container
     /**
      * @param Sala $sala
      */
-    public function setSala(Sala $sala)
+    public function setSala($sala)
     {
         $this->sala = $sala;
     }
@@ -120,7 +120,7 @@ class Container
     /**
      * @return string
      */
-    public function getCod(): string
+    public function getCod()
     {
         return $this->cod;
     }
@@ -128,7 +128,7 @@ class Container
     /**
      * @param string $cod
      */
-    public function setCod(string $cod)
+    public function setCod( $cod)
     {
         $this->cod = $cod;
     }
@@ -136,7 +136,7 @@ class Container
     /**
      * @return string
      */
-    public function getDescricao(): string
+    public function getDescricao()
     {
         return $this->descricao;
     }
@@ -144,7 +144,7 @@ class Container
     /**
      * @param string $descricao
      */
-    public function setDescricao(string $descricao)
+    public function setDescricao( $descricao)
     {
         $this->descricao = $descricao;
     }

@@ -54,7 +54,7 @@ class TipoEquipamento {
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId()
     {
         return $this->id;
     }
@@ -62,7 +62,7 @@ class TipoEquipamento {
     /**
      * @param int $id
      */
-    public function setId(int $id)
+    public function setId($id)
     {
         $this->id = $id;
     }
@@ -70,7 +70,7 @@ class TipoEquipamento {
     /**
      * @return string
      */
-    public function getNome(): string
+    public function getNome()
     {
         return $this->nome;
     }
@@ -78,7 +78,7 @@ class TipoEquipamento {
     /**
      * @param string $nome
      */
-    public function setNome(string $nome)
+    public function setNome($nome)
     {
         $this->nome = $nome;
     }
@@ -86,7 +86,7 @@ class TipoEquipamento {
     /**
      * @return string
      */
-    public function getDescricao(): string
+    public function getDescricao()
     {
         return $this->descricao;
     }
@@ -94,7 +94,7 @@ class TipoEquipamento {
     /**
      * @param string $descricao
      */
-    public function setDescricao(string $descricao)
+    public function setDescricao($descricao)
     {
         $this->descricao = $descricao;
     }
@@ -102,7 +102,7 @@ class TipoEquipamento {
     /**
      * @return string
      */
-    public function getImg(): string
+    public function getImg()
     {
         return $this->img;
     }
@@ -110,7 +110,7 @@ class TipoEquipamento {
     /**
      * @param string $img
      */
-    public function setImg(string $img)
+    public function setImg( $img)
     {
         $this->img = $img;
     }

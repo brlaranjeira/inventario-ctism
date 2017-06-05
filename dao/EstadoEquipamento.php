@@ -30,7 +30,7 @@ class EstadoEquipamento {
     /**
      * @return int
      */
-    public function getId(): int
+    public function getId()
     {
         return $this->id;
     }
@@ -38,7 +38,7 @@ class EstadoEquipamento {
     /**
      * @return string
      */
-    public function getDescricao(): string
+    public function getDescricao()
     {
         return $this->descricao;
     }
